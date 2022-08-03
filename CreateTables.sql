@@ -6,6 +6,23 @@ CREATE TABLE professor(
     titulo varchar not null
 );
 
+CREATE TABLE reitoria (
+    sigla_reitoria VARCHAR NOT NULL, 
+    localizacao GEOMETRY, 
+    email VARCHAR NOT NULL, 
+
+    CONSTRAINT reitoria_pk PRIMARY KEY (sigla_reitoria) 
+);
+
+CREATE TABLE campus (
+    nome_campus VARCHAR NOT NULL, 
+    sigla_reitoria VARCHAR NOT NULL, 
+    localizacao GEOMETRY, 
+    endereco VARCHAR NOT NULL, 
+
+    CONSTRAINT campus_pk PRIMARY KEY (nome_campus, sigla_reitoria) 
+);
+
 CREATE TABLE pro_reitoria(
     sigla_pro_reitoria varchar(15) not null PRIMARY KEY,
     localizacao geometry,
@@ -92,6 +109,98 @@ CREATE TABLE curso_pos_graduacao (
 	CONSTRAINT curso_posgrad_pk PRIMARY KEY (sigla_departamento, nome_cpg),
         --definição da restrição de chave estrangeira
     CONSTRAINT curso_pos_grad_fk FOREIGN KEY (sigla_departamento) REFERENCES departamento(sigla_departamento)
+);
+
+CREATE TABLE area (
+	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
+	nome_campus VARCHAR NOT NULL, 
+	local_area GEOMETRY, 
+	nome_area VARCHAR NOT NULL, 
+
+	CONSTRAINT area_pk PRIMARY KEY (codigo_area), 
+	FOREIGN KEY (nome_campus) REFERENCES campus (nome_campus) 
+);
+
+CREATE TABLE esporte (
+	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
+	local_area GEOMETRY, 
+	nome_area VARCHAR NOT NULL, 
+
+	CONSTRAINT esporte PRIMARY KEY (codigo_area, local_area, nome_area) 
+);
+
+CREATE TABLE esporte_praticado (
+	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
+	local_area GEOMETRY, 
+	nome_area VARCHAR NOT NULL, 
+	nome_esporte VARCHAR NOT NULL, 
+
+	CONSTRAINT esporte_praticado_pk PRIMARY KEY (codigo_area, local_area, nome_area) 
+);
+
+CREATE TABLE lazer (
+	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
+	local_area GEOMETRY, 
+	nome_area VARCHAR NOT NULL, 
+	capacidade VARCHAR, 
+
+	CONSTRAINT lazer_pk PRIMARY KEY (codigo_area, local_area, nome_area) 
+);
+
+CREATE TABLE reserva_natural (
+	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
+	local_area GEOMETRY, 
+	nome_area VARCHAR NOT NULL, 
+	bioma VARCHAR, 
+
+	CONSTRAINT reserva_ natural PRIMARY KEY (codigo_area, local_area, nome_area) 
+);
+
+CREATE TABLE construcao (
+	codigo_construcao INT GENERATED ALWAYS AS IDENTITY, 
+	nome_campus VARCHAR NOT NULL, 
+	local_construcao GEOMETRY, 
+	nome_construcao VARCHAR NOT NULL, 
+
+	CONSTRAINT construcao_pk PRIMARY KEY (codigo_construcao), 
+	FOREIGN KEY (nome_campus) REFERENCES campus (nome_campus) 
+);
+
+CREATE TABLE apoio_academico (
+	codigo_construcao INT GENERATED ALWAYS AS IDENTITY, 
+	local_construcao GEOMETRY, 
+	nome_construcao VARCHAR NOT NULL, 
+	proposito VARCHAR, 
+
+	CONSTRAINT apoio_academico_pk PRIMARY KEY (codigo_construcao) 
+);
+
+CREATE TABLE administrativo (
+	codigo_construcao INT GENERATED ALWAYS AS IDENTITY, 
+	local_construcao GEOMETRY, 
+	nome_construcao VARCHAR NOT NULL, 
+	funcao_administrativa NOT NULL, 
+
+	CONSTRAINT administrativo_pk PRIMARY KEY (codigo_construcao) 
+);
+
+CREATE TABLE alimentacao (
+	codigo_construcao INT GENERATED ALWAYS AS IDENTITY, 
+	local_construcao GEOMETRY, 
+	nome_construcao VARCHAR NOT NULL, 
+	horario_funcionamento VARCHAR, 
+
+	CONSTRAINT alimentacao_pk PRIMARY KEY (codigo_construcao) 
+);
+
+CREATE TABLE transito (
+	codigo_transito INT GENERATED ALWAYS AS IDENTITY, 
+	nome_campus VARCHAR NOT NULL, 
+	nome_transito VARCHAR NOT NULL, 
+	local_transito GEOMETRY, 
+	tipo VARCHAR NOT NULL, 
+
+	CONSTRAINT transito_pk PRIMARY KEY (codigo_transito, nome_campus) 
 );
 
 -- SCHEMA: createTables
