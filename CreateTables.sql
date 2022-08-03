@@ -21,6 +21,13 @@ CREATE TABLE pro_reitoria_professor(
     foreign key(sigla_pro_reitoria) references pro_reitoria(sigla_pro_reitoria)
 );
 
+CREATE TABLE reitoria_professor(
+    id_prof integer not null,
+    sigla_reitoria varchar(15) not null,
+    cargo varchar not null,
+    período varchar not null
+);
+
 
 -- SCHEMA: createTables
 
