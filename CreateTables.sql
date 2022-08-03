@@ -82,7 +82,7 @@ CREATE TABLE departamento_professor (
 	periodo VARCHAR NOT NULL,
 	cargo VARCHAR NOT NULL,
 	foreign key (id_prof) references professor(id_prof),
-	foreign key (sigla_depart) references centro(sigla_depart)
+	foreign key (sigla_depart) references departamento(sigla_depart)
 );
 
 CREATE TABLE centro_professor (
@@ -94,6 +94,24 @@ CREATE TABLE centro_professor (
 	foreign key (sigla_centro) references centro(sigla_centro)
 );
 
+--LABORATORIO
+
+CREATE TABLE laboratorio (
+	id_lab INTEGER NOT NULL,
+	nome VARCHAR NOT NULL,
+	localizacao GEOMETRY,
+	sigla VARCHAR NOT NULL,
+	
+	CONSTRAINT laboratorio_pk PRIMARY KEY (id_lab)
+);
+
+CREATE TABLE dept_gerencia_lab (
+	id_lab INTEGER NOT NULL,
+	sigla_depart VARCHAR NOT NULL,
+	
+	foreign key (id_lab) references laboratorio(id_lab),
+	foreign key (sigla_depart) references departamento(sigla_depart)
+);
 
 --CURSOS_GRADUAÇÃO
 
