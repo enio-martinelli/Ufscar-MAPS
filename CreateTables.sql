@@ -55,7 +55,7 @@ CREATE TABLE departamento_professor (
 	periodo VARCHAR NOT NULL,
 	cargo VARCHAR NOT NULL,
 	foreign key (id_prof) references professor(id_prof),
-	foreign key (sigla_centro) references centro(sigla_centro)
+	foreign key (sigla_depart) references centro(sigla_depart)
 );
 
 CREATE TABLE centro_professor (
