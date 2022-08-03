@@ -25,11 +25,10 @@ CREATE TABLE reitoria_professor(
     id_prof integer not null,
     sigla_reitoria varchar(15) not null,
     cargo varchar not null,
-    período varchar not null
+    período varchar not null,
     foreign key(id_prof) references professor(id_prof),
     foreign key(sigla_reitoria) references reitoria(sigla_reitoria)
 );
-
 
 -- SCHEMA: createTables
 
