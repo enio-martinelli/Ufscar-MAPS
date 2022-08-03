@@ -47,6 +47,16 @@ CREATE TABLE reitoria_professor(
     foreign key(sigla_reitoria) references reitoria(sigla_reitoria)
 );
 
+CREATE TABLE centro (
+	sigla_centro VARCHAR NOT NULL,
+	sigla_reitoria VARCHAR NOT NULL,
+	nome VARCHAR NOT NULL,
+	localizacao GEOMETRY,
+	telefone VARCHAR NOT NULL
+	
+	CONSTRAINT centro_pk PRIMARY KEY (sigla_centro)
+);
+
 --DEPARTAMENTO
 
 CREATE TABLE departamento (
