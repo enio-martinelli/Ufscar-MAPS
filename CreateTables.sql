@@ -52,7 +52,7 @@ CREATE TABLE centro (
 	sigla_reitoria VARCHAR NOT NULL,
 	nome VARCHAR NOT NULL,
 	localizacao GEOMETRY,
-	telefone VARCHAR NOT NULL
+	telefone VARCHAR NOT NULL,
 	
 	CONSTRAINT centro_pk PRIMARY KEY (sigla_centro)
 );
