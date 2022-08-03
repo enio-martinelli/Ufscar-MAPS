@@ -49,6 +49,25 @@ CREATE TABLE departamento (
     
 );
 
+CREATE TABLE departamento_professor (
+	id_prof INTEGER NOT NULL,
+	sigla_depart VARCHAR NOT NULL,
+	periodo VARCHAR NOT NULL,
+	cargo VARCHAR NOT NULL,
+	foreign key (id_prof) references professor(id_prof),
+	foreign key (sigla_centro) references centro(sigla_centro)
+);
+
+CREATE TABLE centro_professor (
+	id_prof INTEGER NOT NULL,
+	sigla_centro VARCHAR NOT NULL,
+	periodo VARCHAR NOT NULL,
+	cargo VARCHAR NOT NULL,
+	foreign key (id_prof) references professor(id_prof),
+	foreign key (sigla_centro) references centro(sigla_centro)
+);
+
+
 --CURSOS_GRADUAÇÃO
 
 CREATE TABLE curso_graduacao (
