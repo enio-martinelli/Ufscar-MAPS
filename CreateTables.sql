@@ -177,7 +177,7 @@ CREATE TABLE reserva_natural (
 	area_id INTEGER NOT NULL,
 	bioma VARCHAR, 
 
-	CONSTRAINT reserva_ natural_pk PRIMARY KEY (area_id),
+	CONSTRAINT reserva_natural_pk PRIMARY KEY (area_id),
 	CONSTRAINT reserva_natural_fk FOREIGN KEY (area_id) REFERENCES area (area_id)
 );
 
