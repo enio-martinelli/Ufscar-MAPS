@@ -46,7 +46,7 @@ CREATE TABLE pro_reitoria_professor(
     
     CONSTRAINT pro_reitoria_professor_pk PRIMARY KEY (prof_id, preitoria_id),
     CONSTRAINT preitoria_professor__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
-    CONSTRAINT preitoria_professor__prof_id_fk FOREIGN KEY (preitoria_id) REFERENCES pro_reitoria (preitoria_id)
+    CONSTRAINT preitoria_professor__preitoria_id_fk FOREIGN KEY (preitoria_id) REFERENCES pro_reitoria (preitoria_id)
 );
 
 CREATE TABLE reitoria_professor(
@@ -196,12 +196,12 @@ CREATE TABLE apoio_academico (
 	proposito VARCHAR, 
 
 	CONSTRAINT apoio_academico_pk PRIMARY KEY (construcao_id),
-	CONSTRIANT apoio_academico_fk FOREIGN KEY (construcao_id) REFERENCES construcao (construcao_id)
+	CONSTRAINT apoio_academico_fk FOREIGN KEY (construcao_id) REFERENCES construcao (construcao_id)
 );
 
 CREATE TABLE administrativo (
 	construcao_id INTEGER NOT NULL, 
-	funcao_administrativa, 
+	funcao_administrativa VARCHAR, 
 
 	CONSTRAINT administrativo_pk PRIMARY KEY (construcao_id),
 	CONSTRAINT administrativo_fk FOREIGN KEY (construcao_id) REFERENCES construcao (construcao_id)
