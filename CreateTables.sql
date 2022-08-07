@@ -1,234 +1,229 @@
 
 CREATE TABLE professor(
-    id_prof smallserial PRIMARY KEY,
-    nome varchar not null,
-    email varchar not null,
-    titulo varchar not null
+    prof_id INTEGER GENERATED ALWAYS AS IDENTITY,
+    nome VARCHAR NOT NULL,
+    email VARCHAR NOT NULL,
+    titulo VARCHAR NOT NULL,
+    
+    CONSTRAINT professor_pk PRIMARY KEY (prof_id)
 );
 
 CREATE TABLE reitoria (
-    sigla_reitoria VARCHAR NOT NULL, 
+    reitoria_id INTEGER GENERATED ALWAYS AS IDENTITY, 
     localizacao GEOMETRY, 
     email VARCHAR NOT NULL, 
 
-    CONSTRAINT reitoria_pk PRIMARY KEY (sigla_reitoria) 
+    CONSTRAINT reitoria_pk PRIMARY KEY (reitoria_id) 
 );
 
 CREATE TABLE campus (
-    nome_campus VARCHAR NOT NULL, 
-    sigla_reitoria VARCHAR NOT NULL, 
-    localizacao GEOMETRY, 
+    nome VARCHAR NOT NULL,
+    campus_id INTEGER GENERATED ALWAYS AS IDENTITY,
+    reitoria_id INTEGER NOT NULL, 
+    localizacao GEOMETRY,
     endereco VARCHAR NOT NULL, 
 
-    CONSTRAINT campus_pk PRIMARY KEY (nome_campus, sigla_reitoria) 
+    CONSTRAINT campus_pk PRIMARY KEY (campus_id, reitoria_id),
+    CONSTRAINT campus_fk FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
 CREATE TABLE pro_reitoria(
-    sigla_pro_reitoria varchar(15) not null PRIMARY KEY,
-    localizacao geometry,
-    nome varchar not null
+    sigla_preitoria VARCHAR NOT NULL,
+    preitoria_id INTEGER GENERATED ALWAYS AS IDENTITY,
+    reitoria_id INTEGER NOT NULL,
+    localizacao GEOMETRY,
+    nome VARCHAR NOT NULL,
+	
+    CONSTRAINT pro_reitoria_pk PRIMARY KEY (preitoria_id),
+    CONSTRAINT pro_reitoria_fk FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
 CREATE TABLE pro_reitoria_professor(
-    id_prof integer not null,
-    sigla_pro_reitoria varchar(15) not null,
-    período varchar not null,
-    cargo varchar not null,
-    foreign key(id_prof) references professor(id_prof),
-    foreign key(sigla_pro_reitoria) references pro_reitoria(sigla_pro_reitoria)
+    prof_id INTEGER NOT NULL,
+    preitoria_id INTEGER NOT NULL,
+    período VARCHAR NOT NULL,
+    cargo VARCHAR NOT NULL,
+    
+    CONSTRAINT pro_reitoria_professor_pk PRIMARY KEY (prof_id, preitoria_id),
+    CONSTRAINT preitoria_professor__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
+    CONSTRAINT preitoria_professor__prof_id_fk FOREIGN KEY (preitoria_id) REFERENCES pro_reitoria (preitoria_id)
 );
 
 CREATE TABLE reitoria_professor(
-    id_prof integer not null,
-    sigla_reitoria varchar(15) not null,
-    cargo varchar not null,
-    período varchar not null,
-    foreign key(id_prof) references professor(id_prof),
-    foreign key(sigla_reitoria) references reitoria(sigla_reitoria)
+    prof_id INTEGER NOT NULL,
+    reitoria_id INTEGER NOT NULL,
+    período VARCHAR NOT NULL,
+    cargo VARCHAR NOT NULL,
+	
+    CONSTRAINT reitoria_professor_pk PRIMARY KEY (prof_id, reitoria_id),
+    CONSTRAINT reitoria_professor__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
+    CONSTRAINT reitoria_professor__reitoria_id FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
 CREATE TABLE centro (
+	centro_id INTEGER GENERATED ALWAYS AS IDENTITY,
 	sigla_centro VARCHAR NOT NULL,
-	sigla_reitoria VARCHAR NOT NULL,
+	reitoria_id INTEGER NOT NULL,
 	nome VARCHAR NOT NULL,
 	localizacao GEOMETRY,
 	telefone VARCHAR NOT NULL,
 	
-	CONSTRAINT centro_pk PRIMARY KEY (sigla_centro)
+	CONSTRAINT centro_pk PRIMARY KEY (centro_id),
+	CONSTRAINT centro_fk FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
---DEPARTAMENTO
 
 CREATE TABLE departamento (
-	sigla_departamento VARCHAR NOT NULL,
-    sigla_centro VARCHAR NOT NULL,
-    nome_depart VARCHAR NOT NULL,
-    localizacao_depart GEOMETRY,
-    site_depart VARCHAR,
-    tel_depart VARCHAR NOT NULL,
-	email_depart VARCHAR NOT NULL,
-     
-	--DEFINIÇÃO DAS RESTRIÇÕES
-        --definição da restrição de chave primária
-	CONSTRAINT departamento_pk PRIMARY KEY (sigla_departamento),
-        --definição da restrição de chave estrangeira
-    CONSTRAINT departamento_fk FOREIGN KEY (sigla_centro) REFERENCES centro(sigla_centro)
+    dept_sigla VARCHAR NOT NULL,
+    dept_id INTEGER GENERATED ALWAYS AS IDENTITY,
+    centro_id INTEGER NOT NULL,
+    nome VARCHAR NOT NULL,
+    localizacao GEOMETRY,
+    site VARCHAR,
+    telefone VARCHAR NOT NULL,
+    email_depart VARCHAR NOT NULL,
+	
+    CONSTRAINT departamento_pk PRIMARY KEY (dept_id),
+    CONSTRAINT departamento_fk FOREIGN KEY (centro_id) REFERENCES centro (centro_id)
     
 );
 
 CREATE TABLE departamento_professor (
-	id_prof INTEGER NOT NULL,
-	sigla_depart VARCHAR NOT NULL,
+	prof_id INTEGER NOT NULL,
+	dept_id INTEGER NOT NULL,
 	periodo VARCHAR NOT NULL,
 	cargo VARCHAR NOT NULL,
-	foreign key (id_prof) references professor(id_prof),
-	foreign key (sigla_depart) references departamento(sigla_depart)
+	
+	CONSTRAINT departamento_professor_pk PRIMARY KEY (prof_id, dept_id),
+	CONSTRAINT dept_professor__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
+	CONSTRAINT dept_professor__dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 );
 
 CREATE TABLE centro_professor (
-	id_prof INTEGER NOT NULL,
-	sigla_centro VARCHAR NOT NULL,
+	prof_id INTEGER NOT NULL,
+	centro_id INTEGER NOT NULL,
 	periodo VARCHAR NOT NULL,
 	cargo VARCHAR NOT NULL,
-	foreign key (id_prof) references professor(id_prof),
-	foreign key (sigla_centro) references centro(sigla_centro)
+	
+	CONSTRAINT centro_professor_pk PRIMARY KEY (prof_id, centro_id),
+	CONSTRAINT centro_prof__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
+	CONSTRAINT centro_prof__centro_id_fk FOREIGN KEY (centro_id) REFERENCES centro (centro_id)
 );
 
---LABORATORIO
 
 CREATE TABLE laboratorio (
-	id_lab INTEGER NOT NULL,
+	lab_id INTEGER GENERATED ALWAYS AS IDENTITY,
 	nome VARCHAR NOT NULL,
 	localizacao GEOMETRY,
 	sigla VARCHAR NOT NULL,
 	
-	CONSTRAINT laboratorio_pk PRIMARY KEY (id_lab)
+	CONSTRAINT laboratorio_pk PRIMARY KEY (lab_id)
 );
 
 CREATE TABLE dept_gerencia_lab (
-	id_lab INTEGER NOT NULL,
-	sigla_depart VARCHAR NOT NULL,
+	lab_id INTEGER NOT NULL,
+	dept_id INTEGER NOT NULL,
 	
-	foreign key (id_lab) references laboratorio(id_lab),
-	foreign key (sigla_depart) references departamento(sigla_depart)
+	CONSTRAINT dept_gerencia_lab_pk PRIMARY KEY (lab_id, dept_id),
+	CONSTRAINT dept_gerencia_lab__lab_id_fk FOREIGN KEY (lab_id) REFERENCES laboratorio (lab_id),
+	CONSTRAINT dept_gerencia_lab__dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 );
 
---CURSOS_GRADUAÇÃO
 
 CREATE TABLE curso_graduacao (
-	sigla_departamento VARCHAR NOT NULL,
-    nome_cg VARCHAR NOT NULL,
-     
-	--DEFINIÇÃO DAS RESTRIÇÕES
-        --definição da restrição de chave primária
-	CONSTRAINT curso_graduacao_pk PRIMARY KEY (sigla_departamento, nome_cg),
-        --definição da restrição de chave estrangeira
-    CONSTRAINT curso_graduacao_fk FOREIGN KEY (sigla_departamento) REFERENCES departamento(sigla_departamento)
+	dept_id INTEGER NOT NULL,
+        nome_cg VARCHAR NOT NULL,
+
+	CONSTRAINT curso_graduacao_pk PRIMARY KEY (dept_id, nome_cg),
+        CONSTRAINT curso_graduacao_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 );
 
---CURSOS_POS_GRADUAÇÃO
 
 CREATE TABLE curso_pos_graduacao (
-	sigla_departamento VARCHAR NOT NULL,
-    nome_cpg VARCHAR NOT NULL,
+	dept_id INTEGER NOT NULL,
+        nome_cpg VARCHAR NOT NULL,
      
-	--DEFINIÇÃO DAS RESTRIÇÕES
-        --definição da restrição de chave primária
-	CONSTRAINT curso_posgrad_pk PRIMARY KEY (sigla_departamento, nome_cpg),
-        --definição da restrição de chave estrangeira
-    CONSTRAINT curso_pos_grad_fk FOREIGN KEY (sigla_departamento) REFERENCES departamento(sigla_departamento)
+	CONSTRAINT curso_posgrad_pk PRIMARY KEY (dept_id, nome_cpg),
+        CONSTRAINT curso_posgrad_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 );
 
 CREATE TABLE area (
-	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
-	nome_campus VARCHAR NOT NULL, 
-	local_area GEOMETRY, 
-	nome_area VARCHAR NOT NULL, 
+	area_id INT GENERATED ALWAYS AS IDENTITY, 
+	campus_id INTEGER NOT NULL, 
+	localizacao GEOMETRY, 
+	nome VARCHAR NOT NULL, 
 
-	CONSTRAINT area_pk PRIMARY KEY (codigo_area), 
-	FOREIGN KEY (nome_campus) REFERENCES campus (nome_campus) 
+	CONSTRAINT area_pk PRIMARY KEY (area_id), 
+	CONSTRAINT area_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id) 
 );
 
 CREATE TABLE esporte (
-	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
-	local_area GEOMETRY, 
-	nome_area VARCHAR NOT NULL, 
+	area_id INTEGER NOT NULL, 
+	esporte_praticado VARCHAR NOT NULL, 
 
-	CONSTRAINT esporte PRIMARY KEY (codigo_area, local_area, nome_area) 
-);
-
-CREATE TABLE esporte_praticado (
-	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
-	local_area GEOMETRY, 
-	nome_area VARCHAR NOT NULL, 
-	nome_esporte VARCHAR NOT NULL, 
-
-	CONSTRAINT esporte_praticado_pk PRIMARY KEY (codigo_area, local_area, nome_area) 
+	CONSTRAINT esporte_pk PRIMARY KEY (area_id, esporte_praticado),
+	CONSTRAINT esporte_fk FOREIGN KEY (area_id) REFERENCES area (area_id)
 );
 
 CREATE TABLE lazer (
-	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
-	local_area GEOMETRY, 
-	nome_area VARCHAR NOT NULL, 
+	area_id INTEGER NOT NULL,  
 	capacidade VARCHAR, 
 
-	CONSTRAINT lazer_pk PRIMARY KEY (codigo_area, local_area, nome_area) 
+	CONSTRAINT lazer_pk PRIMARY KEY (area_id),
+	CONSTRAINT lazer_fk FOREIGN KEY (area_id) REFERENCES area (area_id)
 );
 
 CREATE TABLE reserva_natural (
-	codigo_area INT GENERATED ALWAYS AS IDENTITY, 
-	local_area GEOMETRY, 
-	nome_area VARCHAR NOT NULL, 
+	area_id INTEGER NOT NULL,
 	bioma VARCHAR, 
 
-	CONSTRAINT reserva_ natural PRIMARY KEY (codigo_area, local_area, nome_area) 
+	CONSTRAINT reserva_ natural_pk PRIMARY KEY (area_id),
+	CONSTRAINT reserva_natural_fk FOREIGN KEY (area_id) REFERENCES area (area_id)
 );
 
 CREATE TABLE construcao (
-	codigo_construcao INT GENERATED ALWAYS AS IDENTITY, 
-	nome_campus VARCHAR NOT NULL, 
-	local_construcao GEOMETRY, 
-	nome_construcao VARCHAR NOT NULL, 
+	construcao_id INT GENERATED ALWAYS AS IDENTITY, 
+	campus_id INTEGER NOT NULL, 
+	localizacao GEOMETRY, 
+	nome VARCHAR NOT NULL, 
 
-	CONSTRAINT construcao_pk PRIMARY KEY (codigo_construcao), 
-	FOREIGN KEY (nome_campus) REFERENCES campus (nome_campus) 
+	CONSTRAINT construcao_pk PRIMARY KEY (construcao_id), 
+	CONSTRAINT construcao_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id) 
 );
 
 CREATE TABLE apoio_academico (
-	codigo_construcao INT GENERATED ALWAYS AS IDENTITY, 
-	local_construcao GEOMETRY, 
-	nome_construcao VARCHAR NOT NULL, 
+	construcao_id INTEGER NOT NULL,
 	proposito VARCHAR, 
 
-	CONSTRAINT apoio_academico_pk PRIMARY KEY (codigo_construcao) 
+	CONSTRAINT apoio_academico_pk PRIMARY KEY (construcao_id),
+	CONSTRIANT apoio_academico_fk FOREIGN KEY (construcao_id) REFERENCES construcao (construcao_id)
 );
 
 CREATE TABLE administrativo (
-	codigo_construcao INT GENERATED ALWAYS AS IDENTITY, 
-	local_construcao GEOMETRY, 
-	nome_construcao VARCHAR NOT NULL, 
-	funcao_administrativa NOT NULL, 
+	construcao_id INTEGER NOT NULL, 
+	funcao_administrativa, 
 
-	CONSTRAINT administrativo_pk PRIMARY KEY (codigo_construcao) 
+	CONSTRAINT administrativo_pk PRIMARY KEY (construcao_id),
+	CONSTRAINT administrativo_fk FOREIGN KEY (construcao_id) REFERENCES construcao (construcao_id)
 );
 
 CREATE TABLE alimentacao (
-	codigo_construcao INT GENERATED ALWAYS AS IDENTITY, 
-	local_construcao GEOMETRY, 
-	nome_construcao VARCHAR NOT NULL, 
+	construcao_id INTEGER NOT NULL, 
 	horario_funcionamento VARCHAR, 
 
-	CONSTRAINT alimentacao_pk PRIMARY KEY (codigo_construcao) 
+	CONSTRAINT alimentacao_pk PRIMARY KEY (construcao_id),
+	CONSTRAINT alimentacao_fk FOREIGN KEY (construcao_id) REFERENCES construcao (construcao_id)
 );
 
 CREATE TABLE transito (
-	codigo_transito INT GENERATED ALWAYS AS IDENTITY, 
-	nome_campus VARCHAR NOT NULL, 
-	nome_transito VARCHAR NOT NULL, 
-	local_transito GEOMETRY, 
+	transito_id INT GENERATED ALWAYS AS IDENTITY, 
+	campus_id INTEGER NOT NULL, 
+	nome VARCHAR NOT NULL, 
+	localizacao GEOMETRY, 
 	tipo VARCHAR NOT NULL, 
 
-	CONSTRAINT transito_pk PRIMARY KEY (codigo_transito, nome_campus) 
+	CONSTRAINT transito_pk PRIMARY KEY (transito_id, campus_id),
+	CONSTRAINT transito_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id)
 );
 
 -- SCHEMA: createTables
