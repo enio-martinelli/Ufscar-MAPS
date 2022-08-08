@@ -66,7 +66,7 @@ CREATE TABLE centro (
 	reitoria_id INTEGER NOT NULL,
 	nome VARCHAR NOT NULL,
 	localizacao GEOMETRY,
-	telefone VARCHAR NOT NULL,
+	telefone VARCHAR,
 	
 	CONSTRAINT centro_pk PRIMARY KEY (centro_id),
 	CONSTRAINT centro_fk FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
