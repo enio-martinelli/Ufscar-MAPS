@@ -89,10 +89,10 @@ CREATE TABLE departamento (
 );
 
 CREATE TABLE departamento_professor (
-	prof_id INTEGER NOT NULL,
-	dept_id INTEGER NOT NULL,
-	periodo VARCHAR NOT NULL,
-	cargo VARCHAR NOT NULL,
+	prof_id INTEGER,
+	dept_id INTEGER,
+	periodo VARCHAR,
+	cargo VARCHAR,
 	
 	CONSTRAINT departamento_professor_pk PRIMARY KEY (prof_id, dept_id),
 	CONSTRAINT dept_professor__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
@@ -102,7 +102,7 @@ CREATE TABLE departamento_professor (
 CREATE TABLE centro_professor (
 	prof_id INTEGER NOT NULL,
 	centro_id INTEGER NOT NULL,
-	periodo VARCHAR NOT NULL,
+	periodo VARCHAR,
 	cargo VARCHAR NOT NULL,
 	
 	CONSTRAINT centro_professor_pk PRIMARY KEY (prof_id, centro_id),
