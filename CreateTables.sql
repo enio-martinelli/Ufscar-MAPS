@@ -72,19 +72,18 @@ CREATE TABLE centro (
 	CONSTRAINT centro_fk FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
-
 CREATE TABLE departamento (
+    dept_id INT GENERATED ALWAYS AS IDENTITY,
     dept_sigla VARCHAR NOT NULL,
-    dept_id INTEGER GENERATED ALWAYS AS IDENTITY,
     centro_id INTEGER NOT NULL,
     nome VARCHAR NOT NULL,
     localizacao GEOMETRY,
     site VARCHAR,
-    telefone VARCHAR NOT NULL,
-    email_depart VARCHAR NOT NULL,
+    telefone VARCHAR,
+    email VARCHAR,
 	
-    CONSTRAINT departamento_pk PRIMARY KEY (dept_id),
-    CONSTRAINT departamento_fk FOREIGN KEY (centro_id) REFERENCES centro (centro_id)
+    CONSTRAINT departamento_pk PRIMARY KEY (dept_ip),
+    CONSTRAINT departamento_fk FOREIGN KEY (centro_id) REFERENCES centro(centro_id)
     
 );
 
@@ -129,22 +128,20 @@ CREATE TABLE dept_gerencia_lab (
 	CONSTRAINT dept_gerencia_lab__dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 );
 
-
 CREATE TABLE curso_graduacao (
-	dept_id INTEGER NOT NULL,
-        nome_cg VARCHAR NOT NULL,
-
-	CONSTRAINT curso_graduacao_pk PRIMARY KEY (dept_id, nome_cg),
-        CONSTRAINT curso_graduacao_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
+    dept_ip INTEGER NOT NULL,
+    nome_cg VARCHAR NOT NULL,
+	
+    CONSTRAINT curso_graduacao_pk PRIMARY KEY (dept_id, nome_cg),
+    CONSTRAINT curso_graduacao_fk FOREIGN KEY (dept_id) REFERENCES departamento(dept_id)
 );
 
-
 CREATE TABLE curso_pos_graduacao (
-	dept_id INTEGER NOT NULL,
-        nome_cpg VARCHAR NOT NULL,
-     
-	CONSTRAINT curso_posgrad_pk PRIMARY KEY (dept_id, nome_cpg),
-        CONSTRAINT curso_posgrad_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
+    dept_ip INTEGER NOT NULL,
+    nome_cpg VARCHAR NOT NULL,
+	
+    CONSTRAINT curso_pos_graduacao_pk PRIMARY KEY (dept_id, nome_cpg),
+    CONSTRAINT curso_pos_graduacao_fk FOREIGN KEY (dept_id) REFERENCES departamento(dept_id)
 );
 
 CREATE TABLE area (
