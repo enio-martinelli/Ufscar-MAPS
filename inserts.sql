@@ -104,3 +104,29 @@ VALUES ('CCET', 1, 'Centro de Ciências Exatas e de Tecnologia', NULL, '16 3351-
 ('CCA', 1, 'Centro de Ciências Agrárias', NULL, '19 3543-2600'),
 ('CCN', 1, 'Centro de Ciências da Natureza', NULL, NULL);
 
+
+
+-- inserções área --- (espaços delimitam qual o campus seguindo a ordem: SAO CARLOS -> ARARAS -> SOROCABA -> LAGOA DO SINO)
+INSERT INTO area VALUES (NULL, ‘Ginásio de Esportes’); 
+INSERT INTO area VALUES (NULL, ‘Campo de Futebol’); 
+INSERT INTO area VALUES (NULL, ‘Piscina Semi-Olímpica’); 
+INSERT INTO area VALUES (NULL, ‘Piscina Aprendizagem’); 
+INSERT INTO area VALUES (NULL, ‘Espaço de Convivência Área Sul’); 
+INSERT INTO area VALUES (NULL, ‘Teatro de Bolso’); 
+INSERT INTO area VALUES (NULL, ‘Quiosque Área Sul’); 
+INSERT INTO area VALUES (NULL, ‘Quiosque I - Área Norte’); 
+INSERT INTO area VALUES (NULL, ‘Quiosque II - Área Norte’); 
+INSERT INTO area VALUES (NULL, ‘Sala de Ensaio da Orquestra’); 
+INSERT INTO area VALUES (NULL, ‘Espaço Cultural’); 
+INSERT INTO area VALUES (NULL, ‘Bosque de Pinus da UFSCar’); 
+INSERT INTO area VALUES (NULL, ‘Represa do Rio Monjolinho’);
+
+INSERT INTO area VALUES (NULL, ‘Campo de Futebol 01’); 
+INSERT INTO area VALUES (NULL, ‘Campo de Futebol 02’); 
+INSERT INTO area VALUES (NULL, ‘Quadra Esportiva’); 
+
+INSERT INTO area VALUES (NULL, ‘Quadra Esportiva’); 
+INSERT INTO area VALUES (NULL, ‘Quiosque 1’); 
+INSERT INTO area VALUES (NULL, ‘Quiosque 2’); 
+INSERT INTO area VALUES (NULL, ‘Praça’); 
+
