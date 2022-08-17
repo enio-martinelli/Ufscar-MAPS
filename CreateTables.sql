@@ -1,5 +1,4 @@
-
-CREATE TABLE professor(
+CREATE TABLE IF NOT EXISTS professor(
     prof_id INTEGER GENERATED ALWAYS AS IDENTITY,
     nome VARCHAR NOT NULL,
     email VARCHAR NOT NULL,
@@ -8,7 +7,7 @@ CREATE TABLE professor(
     CONSTRAINT professor_pk PRIMARY KEY (prof_id)
 );
 
-CREATE TABLE reitoria (
+CREATE TABLE IF NOT EXISTS reitoria (
     reitoria_id INTEGER GENERATED ALWAYS AS IDENTITY, 
     localizacao GEOMETRY, 
     email VARCHAR NOT NULL, 
@@ -16,9 +15,9 @@ CREATE TABLE reitoria (
     CONSTRAINT reitoria_pk PRIMARY KEY (reitoria_id) 
 );
 
-CREATE TABLE campus (
+CREATE TABLE IF NOT EXISTS campus (
     nome VARCHAR NOT NULL,
-    campus_id INTEGER GENERATED ALWAYS AS IDENTITY,
+    campus_id INTEGER GENERATED ALWAYS AS IDENTITY UNIQUE,
     reitoria_id INTEGER NOT NULL, 
     localizacao GEOMETRY,
     endereco VARCHAR NOT NULL, 
@@ -27,7 +26,7 @@ CREATE TABLE campus (
     CONSTRAINT campus_fk FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
-CREATE TABLE pro_reitoria(
+CREATE TABLE IF NOT EXISTS pro_reitoria(
     sigla_preitoria VARCHAR NOT NULL,
     preitoria_id INTEGER GENERATED ALWAYS AS IDENTITY,
     reitoria_id INTEGER NOT NULL,
@@ -38,10 +37,10 @@ CREATE TABLE pro_reitoria(
     CONSTRAINT pro_reitoria_fk FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
-CREATE TABLE pro_reitoria_professor(
+CREATE TABLE IF NOT EXISTS pro_reitoria_professor(
     prof_id INTEGER NOT NULL,
     preitoria_id INTEGER NOT NULL,
-    período VARCHAR NOT NULL,
+    periodo VARCHAR,
     cargo VARCHAR NOT NULL,
     
     CONSTRAINT pro_reitoria_professor_pk PRIMARY KEY (prof_id, preitoria_id),
@@ -49,10 +48,10 @@ CREATE TABLE pro_reitoria_professor(
     CONSTRAINT preitoria_professor__preitoria_id_fk FOREIGN KEY (preitoria_id) REFERENCES pro_reitoria (preitoria_id)
 );
 
-CREATE TABLE reitoria_professor(
+CREATE TABLE IF NOT EXISTS reitoria_professor(
     prof_id INTEGER NOT NULL,
     reitoria_id INTEGER NOT NULL,
-    período VARCHAR NOT NULL,
+    periodo VARCHAR NOT NULL,
     cargo VARCHAR NOT NULL,
 	
     CONSTRAINT reitoria_professor_pk PRIMARY KEY (prof_id, reitoria_id),
@@ -60,7 +59,7 @@ CREATE TABLE reitoria_professor(
     CONSTRAINT reitoria_professor__reitoria_id FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
-CREATE TABLE centro (
+CREATE TABLE IF NOT EXISTS centro (
 	centro_id INTEGER GENERATED ALWAYS AS IDENTITY,
 	sigla_centro VARCHAR NOT NULL,
 	reitoria_id INTEGER NOT NULL,
@@ -72,7 +71,7 @@ CREATE TABLE centro (
 	CONSTRAINT centro_fk FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
-CREATE TABLE departamento (
+CREATE TABLE IF NOT EXISTS departamento (
     dept_id INT GENERATED ALWAYS AS IDENTITY,
     dept_sigla VARCHAR NOT NULL,
     centro_id INTEGER NOT NULL,
@@ -82,12 +81,12 @@ CREATE TABLE departamento (
     telefone VARCHAR,
     email VARCHAR,
 	
-    CONSTRAINT departamento_pk PRIMARY KEY (dept_ip),
+    CONSTRAINT departamento_pk PRIMARY KEY (dept_id),
     CONSTRAINT departamento_fk FOREIGN KEY (centro_id) REFERENCES centro(centro_id)
     
 );
 
-CREATE TABLE departamento_professor (
+CREATE TABLE IF NOT EXISTS departamento_professor (
 	prof_id INTEGER,
 	dept_id INTEGER,
 	periodo VARCHAR,
@@ -98,7 +97,7 @@ CREATE TABLE departamento_professor (
 	CONSTRAINT dept_professor__dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 );
 
-CREATE TABLE centro_professor (
+CREATE TABLE IF NOT EXISTS centro_professor (
 	prof_id INTEGER NOT NULL,
 	centro_id INTEGER NOT NULL,
 	periodo VARCHAR,
@@ -110,7 +109,7 @@ CREATE TABLE centro_professor (
 );
 
 
-CREATE TABLE laboratorio (
+CREATE TABLE IF NOT EXISTS laboratorio (
 	lab_id INTEGER GENERATED ALWAYS AS IDENTITY,
 	nome VARCHAR NOT NULL,
 	localizacao GEOMETRY,
@@ -119,7 +118,7 @@ CREATE TABLE laboratorio (
 	CONSTRAINT laboratorio_pk PRIMARY KEY (lab_id)
 );
 
-CREATE TABLE dept_gerencia_lab (
+CREATE TABLE IF NOT EXISTS dept_gerencia_lab (
 	lab_id INTEGER NOT NULL,
 	dept_id INTEGER NOT NULL,
 	
@@ -128,23 +127,23 @@ CREATE TABLE dept_gerencia_lab (
 	CONSTRAINT dept_gerencia_lab__dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 );
 
-CREATE TABLE curso_graduacao (
-    dept_ip INTEGER NOT NULL,
+CREATE TABLE IF NOT EXISTS curso_graduacao (
+    dept_id INTEGER NOT NULL,
     nome_cg VARCHAR NOT NULL,
 	
     CONSTRAINT curso_graduacao_pk PRIMARY KEY (dept_id, nome_cg),
     CONSTRAINT curso_graduacao_fk FOREIGN KEY (dept_id) REFERENCES departamento(dept_id)
 );
 
-CREATE TABLE curso_pos_graduacao (
-    dept_ip INTEGER NOT NULL,
+CREATE TABLE IF NOT EXISTS curso_pos_graduacao (
+    dept_id INTEGER NOT NULL,
     nome_cpg VARCHAR NOT NULL,
 	
     CONSTRAINT curso_pos_graduacao_pk PRIMARY KEY (dept_id, nome_cpg),
     CONSTRAINT curso_pos_graduacao_fk FOREIGN KEY (dept_id) REFERENCES departamento(dept_id)
 );
 
-CREATE TABLE area (
+CREATE TABLE IF NOT EXISTS area (
 	area_id INT GENERATED ALWAYS AS IDENTITY, 
 	campus_id INTEGER NOT NULL, 
 	localizacao GEOMETRY, 
@@ -154,7 +153,7 @@ CREATE TABLE area (
 	CONSTRAINT area_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id) 
 );
 
-CREATE TABLE esporte (
+CREATE TABLE IF NOT EXISTS esporte (
 	area_id INTEGER NOT NULL, 
 	esporte_praticado VARCHAR NOT NULL, 
 
@@ -162,7 +161,7 @@ CREATE TABLE esporte (
 	CONSTRAINT esporte_fk FOREIGN KEY (area_id) REFERENCES area (area_id)
 );
 
-CREATE TABLE lazer (
+CREATE TABLE IF NOT EXISTS lazer (
 	area_id INTEGER NOT NULL,  
 	capacidade VARCHAR, 
 
@@ -170,7 +169,7 @@ CREATE TABLE lazer (
 	CONSTRAINT lazer_fk FOREIGN KEY (area_id) REFERENCES area (area_id)
 );
 
-CREATE TABLE reserva_natural (
+CREATE TABLE IF NOT EXISTS reserva_natural (
 	area_id INTEGER NOT NULL,
 	bioma VARCHAR, 
 
@@ -178,7 +177,7 @@ CREATE TABLE reserva_natural (
 	CONSTRAINT reserva_natural_fk FOREIGN KEY (area_id) REFERENCES area (area_id)
 );
 
-CREATE TABLE construcao (
+CREATE TABLE  IF NOT EXISTS construcao (
 	construcao_id INT GENERATED ALWAYS AS IDENTITY, 
 	campus_id INTEGER NOT NULL, 
 	localizacao GEOMETRY, 
@@ -188,7 +187,7 @@ CREATE TABLE construcao (
 	CONSTRAINT construcao_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id) 
 );
 
-CREATE TABLE apoio_academico (
+CREATE TABLE IF NOT EXISTS apoio_academico (
 	construcao_id INTEGER NOT NULL,
 	proposito VARCHAR, 
 
@@ -196,7 +195,7 @@ CREATE TABLE apoio_academico (
 	CONSTRAINT apoio_academico_fk FOREIGN KEY (construcao_id) REFERENCES construcao (construcao_id)
 );
 
-CREATE TABLE administrativo (
+CREATE TABLE IF NOT EXISTS administrativo (
 	construcao_id INTEGER NOT NULL, 
 	funcao_administrativa VARCHAR, 
 
@@ -204,7 +203,7 @@ CREATE TABLE administrativo (
 	CONSTRAINT administrativo_fk FOREIGN KEY (construcao_id) REFERENCES construcao (construcao_id)
 );
 
-CREATE TABLE alimentacao (
+CREATE TABLE IF NOT EXISTS alimentacao (
 	construcao_id INTEGER NOT NULL, 
 	horario_funcionamento VARCHAR, 
 
@@ -212,7 +211,7 @@ CREATE TABLE alimentacao (
 	CONSTRAINT alimentacao_fk FOREIGN KEY (construcao_id) REFERENCES construcao (construcao_id)
 );
 
-CREATE TABLE transito (
+CREATE TABLE IF NOT EXISTS transito (
 	transito_id INT GENERATED ALWAYS AS IDENTITY, 
 	campus_id INTEGER NOT NULL, 
 	nome VARCHAR NOT NULL, 
@@ -222,13 +221,3 @@ CREATE TABLE transito (
 	CONSTRAINT transito_pk PRIMARY KEY (transito_id, campus_id),
 	CONSTRAINT transito_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id)
 );
-
--- SCHEMA: createTables
-
--- DROP SCHEMA IF EXISTS "createTables" ;
-
-CREATE SCHEMA IF NOT EXISTS "createTables"
-    AUTHORIZATION postgres;
-
-COMMENT ON SCHEMA "createTables"
-    IS 'Criação de tabelas';
