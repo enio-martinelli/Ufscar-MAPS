@@ -17,7 +17,24 @@ VALUES
 ('Jeanne Liliane Marlene Michel', 'jeanne.michel@ufscar.br', 'Doutora'),
 ('Antônio Roberto de Carvalho', 'antbeto@ufscar.br', 'Doutor'),
 ('Djalma Ribeiro Júnior', 'djalmajr@ufscar.br', 'Doutor'),
-('Gisele Aparecida Zutin Castelani', 'giseli@ufscar.br', 'Mestra');
+('Gisele Aparecida Zutin Castelani', 'giseli@ufscar.br', 'Mestra'),
+('Maria da Graça Gama Melão', 'dmgm@ufscar.br', 'Doutora'),
+('Isabela Aparecida de Oliveira Lussi', 'bellussi@ufscar.br', 'Doutora'),
+('Luiz Fernando de Oriani e Paulillo', 'dlfp@ufscar.br', 'Doutor'),
+('Guillermo Antonio Lobos Villagra', 'lobos@dm.ufscar.br', 'Doutor'),
+('Rodrigo Vilela Rodrigues', 'rvilela@ufscar.br', 'Doutor'),
+('Monica Fabiana Bento Moreira Thiersch', 'monicathiersch@ufscar.br', 'Doutora'),
+('André Cordeiro Alves dos Santos', 'andrecas@ufscar.br', 'Doutor'),
+('Maria Walburga dos Santos', 'walburga@ufscar.br', 'Doutora'),
+('Ana Lúcia Brandl', 'albrandl@ufscar.br', 'Doutora'),
+('Marystela Ferreira', 'marystela@ufscar.br', 'Doutora'),
+('Ana Cristina Juvenal da Cruz', 'anacjcruz@gmail.com', 'Doutora'),
+('Adélcio Camilo Machado', 'adelcio.camilo@ufscar.br', 'Doutor'),
+('Ricardo Toshio Fujihara', 'rtfujihara@ufscar.br', 'Doutor'),
+('Adriana Cavalieri Sais', 'acsais@ufscar.br', 'Doutora'),
+('Giulianna Rondineli Carmassi', 'giulianna@ufscar.br', 'Doutora'),
+('Henrique Carmona Duval', 'henriquecarmona@ufscar.br', 'Doutor');
+
 
 --- inserção reitoria ---
 INSERT INTO reitoria (localizacao, email) VALUES (NULL, 'reitoria@ufscar.br');
@@ -103,6 +120,18 @@ VALUES ('CCET', 1, 'Centro de Ciências Exatas e de Tecnologia', NULL, '16 3351-
 ('CCTS', 1, 'Centro de Ciências e Tecnologias para Sustentabilidade', NULL, '15 3329-5937'),
 ('CCA', 1, 'Centro de Ciências Agrárias', NULL, '19 3543-2600'),
 ('CCN', 1, 'Centro de Ciências da Natureza', NULL, NULL);
+
+--- inserções centro_professor ---
+INSERT INTO centro_professor (prof_id, centro_id, periodo, cargo)
+VALUES ('18', '2', '8/10/2018 – atual', 'diretor'), ('19', '2', '8/10/2018 – atual', 'vice-diretor'),
+('20', '1', NULL, 'diretor'), ('21', '1', NULL, 'vice-diretor'), 
+('22', '4', '2018-2022', 'diretor'), ('23', '4', '2018-2022', 'vice-diretor'), 
+('24', '5', '2022-2026', 'diretor'), ('25', '5', '2022-2026', 'vice-diretor'), 
+('26', '6', NULL, 'diretor'), ('27', '6', NULL, 'vice-diretor'), 
+('28', '3', '2020-2024', 'diretor'), ('29', '3', '2020-2024', 'vice-diretor'), 
+('30', '7', NULL, 'diretor'), ('31', '7', NULL, 'vice-diretor'), 
+('32', '8', NULL, 'diretor'), ('33', '8', NULL, 'vice-diretor');
+
 
 
 --- inserções area --- ordem: esporte -> lazer -> reserva_natural
