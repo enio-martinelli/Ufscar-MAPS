@@ -20,7 +20,13 @@ VALUES
 ('Gisele Aparecida Zutin Castelani', 'giseli@ufscar.br', 'Mestra');
 
 --- inserção reitoria ---
-INSERT INTO reitoria(email) VALUES ('reitoria@email.com'); ---PRECISA DAR UM UPDATE NO EMAIL, COLOQUEI UM ALEATORIO SÓ PRA TESTAR 
+INSERT INTO reitoria VALUES (NULL, 'reitoria@ufscar.br');
+
+--- inserção dos campus ---
+INSERT INTO campus VALUES ('Campus São Carlos', NULL, 'Rod. Washington Luís km 235 - SP-310 - São Carlos'); 
+INSERT INTO campus VALUES ('Campus Araras', NULL, 'Rod. Anhanguera km 174 - SP-330 - Araras'); 
+INSERT INTO campus VALUES ('Campus Sorocaba', NULL, 'Rod. João Leme dos Santos km 110 - SP-264 Bairro do Itinga - Sorocaba'); 
+INSERT INTO campus VALUES ('Campus Lagoa do Sino', NULL, 'Rod. Lauri Simões de Barros km 12 - SP-189 Bairro Aracaçu - Buri'); 
 
 --- inserções pro_reitoria ---
 INSERT INTO pro_reitoria(sigla_preitoria, reitoria_id, nome)
