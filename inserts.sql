@@ -20,13 +20,13 @@ VALUES
 ('Gisele Aparecida Zutin Castelani', 'giseli@ufscar.br', 'Mestra');
 
 --- inserção reitoria ---
-INSERT INTO reitoria VALUES (NULL, 'reitoria@ufscar.br');
+INSERT INTO reitoria (localizacao, email) VALUES (NULL, 'reitoria@ufscar.br');
 
 --- inserção dos campus ---
-INSERT INTO campus VALUES ('Campus São Carlos', NULL, 'Rod. Washington Luís km 235 - SP-310 - São Carlos'); 
-INSERT INTO campus VALUES ('Campus Araras', NULL, 'Rod. Anhanguera km 174 - SP-330 - Araras'); 
-INSERT INTO campus VALUES ('Campus Sorocaba', NULL, 'Rod. João Leme dos Santos km 110 - SP-264 Bairro do Itinga - Sorocaba'); 
-INSERT INTO campus VALUES ('Campus Lagoa do Sino', NULL, 'Rod. Lauri Simões de Barros km 12 - SP-189 Bairro Aracaçu - Buri'); 
+INSERT INTO campus (nome, reitoria_id, localizacao, endereco) VALUES ('Campus São Carlos', 1, NULL, 'Rod. Washington Luís km 235 - SP-310 - São Carlos'); 
+INSERT INTO campus (nome, reitoria_id, localizacao, endereco) VALUES ('Campus Araras', 1, NULL, 'Rod. Anhanguera km 174 - SP-330 - Araras'); 
+INSERT INTO campus (nome, reitoria_id, localizacao, endereco) VALUES ('Campus Sorocaba', 1, NULL, 'Rod. João Leme dos Santos km 110 - SP-264 Bairro do Itinga - Sorocaba'); 
+INSERT INTO campus (nome, reitoria_id, localizacao, endereco) VALUES ('Campus Lagoa do Sino', 1, NULL, 'Rod. Lauri Simões de Barros km 12 - SP-189 Bairro Aracaçu - Buri'); 
 
 --- inserções pro_reitoria ---
 INSERT INTO pro_reitoria(sigla_preitoria, reitoria_id, nome)
