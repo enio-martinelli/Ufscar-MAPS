@@ -222,6 +222,6 @@ CREATE TABLE IF NOT EXISTS transito (
 	localizacao GEOMETRY, 
 	tipo VARCHAR NOT NULL, 
 
-	CONSTRAINT transito_pk PRIMARY KEY (transito_id, campus_id),
+	CONSTRAINT transito_pk PRIMARY KEY (transito_id),
 	CONSTRAINT transito_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id)
 );
