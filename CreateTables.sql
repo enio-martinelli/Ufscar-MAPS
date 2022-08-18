@@ -17,12 +17,12 @@ CREATE TABLE IF NOT EXISTS reitoria (
 
 CREATE TABLE IF NOT EXISTS campus (
     nome VARCHAR NOT NULL,
-    campus_id INTEGER GENERATED ALWAYS AS IDENTITY UNIQUE,
+    campus_id INTEGER GENERATED ALWAYS AS IDENTITY,
     reitoria_id INTEGER NOT NULL, 
     localizacao GEOMETRY,
     endereco VARCHAR NOT NULL, 
 
-    CONSTRAINT campus_pk PRIMARY KEY (campus_id, reitoria_id),
+    CONSTRAINT campus_pk PRIMARY KEY (campus_id),
     CONSTRAINT campus_fk FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
