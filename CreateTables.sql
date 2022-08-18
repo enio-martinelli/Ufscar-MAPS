@@ -40,7 +40,8 @@ CREATE TABLE IF NOT EXISTS pro_reitoria(
 CREATE TABLE IF NOT EXISTS pro_reitoria_professor(
     prof_id INTEGER NOT NULL,
     preitoria_id INTEGER NOT NULL,
-    periodo VARCHAR,
+    ano_inicio DATA,
+    ano_termino DATA,
     cargo VARCHAR NOT NULL,
     
     CONSTRAINT pro_reitoria_professor_pk PRIMARY KEY (prof_id, preitoria_id),
@@ -51,12 +52,13 @@ CREATE TABLE IF NOT EXISTS pro_reitoria_professor(
 CREATE TABLE IF NOT EXISTS reitoria_professor(
     prof_id INTEGER NOT NULL,
     reitoria_id INTEGER NOT NULL,
-    periodo VARCHAR NOT NULL,
+    ano_inicio DATA,
+    ano_termino DATA,
     cargo VARCHAR NOT NULL,
 	
     CONSTRAINT reitoria_professor_pk PRIMARY KEY (prof_id, reitoria_id),
-    CONSTRAINT reitoria_professor__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
-    CONSTRAINT reitoria_professor__reitoria_id FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
+    CONSTRAINT reitoria_professor_prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
+    CONSTRAINT reitoria_professor_reitoria_id FOREIGN KEY (reitoria_id) REFERENCES reitoria (reitoria_id)
 );
 
 CREATE TABLE IF NOT EXISTS centro (
@@ -89,23 +91,25 @@ CREATE TABLE IF NOT EXISTS departamento (
 CREATE TABLE IF NOT EXISTS departamento_professor (
 	prof_id INTEGER,
 	dept_id INTEGER,
-	periodo VARCHAR,
+	ano_inicio DATA,
+        ano_termino DATA,
 	cargo VARCHAR,
 	
 	CONSTRAINT departamento_professor_pk PRIMARY KEY (prof_id, dept_id),
-	CONSTRAINT dept_professor__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
-	CONSTRAINT dept_professor__dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
+	CONSTRAINT dept_professor_prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
+	CONSTRAINT dept_professor_dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 );
 
 CREATE TABLE IF NOT EXISTS centro_professor (
 	prof_id INTEGER NOT NULL,
 	centro_id INTEGER NOT NULL,
-	periodo VARCHAR,
+	ano_inicio DATA,
+        ano_termino DATA,
 	cargo VARCHAR NOT NULL,
 	
 	CONSTRAINT centro_professor_pk PRIMARY KEY (prof_id, centro_id),
-	CONSTRAINT centro_prof__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
-	CONSTRAINT centro_prof__centro_id_fk FOREIGN KEY (centro_id) REFERENCES centro (centro_id)
+	CONSTRAINT centro_prof_prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
+	CONSTRAINT centro_prof_centro_id_fk FOREIGN KEY (centro_id) REFERENCES centro (centro_id)
 );
 
 
@@ -123,8 +127,8 @@ CREATE TABLE IF NOT EXISTS dept_gerencia_lab (
 	dept_id INTEGER NOT NULL,
 	
 	CONSTRAINT dept_gerencia_lab_pk PRIMARY KEY (lab_id, dept_id),
-	CONSTRAINT dept_gerencia_lab__lab_id_fk FOREIGN KEY (lab_id) REFERENCES laboratorio (lab_id),
-	CONSTRAINT dept_gerencia_lab__dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
+	CONSTRAINT dept_gerencia_lab_lab_id_fk FOREIGN KEY (lab_id) REFERENCES laboratorio (lab_id),
+	CONSTRAINT dept_gerencia_lab_dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 );
 
 CREATE TABLE IF NOT EXISTS curso_graduacao (
