@@ -184,11 +184,14 @@ CREATE TABLE IF NOT EXISTS reserva_natural (
 CREATE TABLE  IF NOT EXISTS construcao (
 	construcao_id INT GENERATED ALWAYS AS IDENTITY, 
 	campus_id INTEGER NOT NULL, 
+	dept_id INTEGER,
 	localizacao GEOMETRY, 
 	nome VARCHAR NOT NULL, 
 
 	CONSTRAINT construcao_pk PRIMARY KEY (construcao_id), 
-	CONSTRAINT construcao_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id) 
+	CONSTRAINT construcao_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id),
+	CONSTRAINT construcao_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
+	
 );
 
 CREATE TABLE IF NOT EXISTS apoio_academico (
