@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS pro_reitoria(
 CREATE TABLE IF NOT EXISTS pro_reitoria_professor(
     prof_id INTEGER NOT NULL,
     preitoria_id INTEGER NOT NULL,
-    ano_inicio DATE,
-    ano_termino DATE,
+    ano_inicio INTEGER,
+    ano_termino INTEGER,
     cargo VARCHAR NOT NULL,
     
     CONSTRAINT pro_reitoria_professor_pk PRIMARY KEY (prof_id, preitoria_id),
@@ -52,8 +52,8 @@ CREATE TABLE IF NOT EXISTS pro_reitoria_professor(
 CREATE TABLE IF NOT EXISTS reitoria_professor(
     prof_id INTEGER NOT NULL,
     reitoria_id INTEGER NOT NULL,
-    ano_inicio DATE,
-    ano_termino DATE,
+    ano_inicio INTEGER,
+    ano_termino INTEGER,
     cargo VARCHAR NOT NULL,
 	
     CONSTRAINT reitoria_professor_pk PRIMARY KEY (prof_id, reitoria_id),
@@ -91,8 +91,8 @@ CREATE TABLE IF NOT EXISTS departamento (
 CREATE TABLE IF NOT EXISTS departamento_professor (
 	prof_id INTEGER,
 	dept_id INTEGER,
-	ano_inicio DATE,
-        ano_termino DATE,
+	ano_inicio INTEGER,
+        ano_termino INTEGER,
 	cargo VARCHAR,
 	
 	CONSTRAINT departamento_professor_pk PRIMARY KEY (prof_id, dept_id),
@@ -103,8 +103,8 @@ CREATE TABLE IF NOT EXISTS departamento_professor (
 CREATE TABLE IF NOT EXISTS centro_professor (
 	prof_id INTEGER NOT NULL,
 	centro_id INTEGER NOT NULL,
-	ano_inicio DATE,
-        ano_termino DATE,
+	ano_inicio INTEGER,
+        ano_termino INTEGER,
 	cargo VARCHAR NOT NULL,
 	
 	CONSTRAINT centro_professor_pk PRIMARY KEY (prof_id, centro_id),
