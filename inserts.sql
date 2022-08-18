@@ -135,24 +135,24 @@ VALUES ('18', '2', '8/10/2018 – atual', 'diretor'), ('19', '2', '8/10/2018 –
 
 
 --- inserções area --- ordem: esporte -> lazer -> reserva_natural
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Ginásio de Esportes’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Campo de Futebol’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, ‘Campo de Futebol 01’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, ‘Campo de Futebol 02’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, ‘Quadra Esportiva’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (3, NULL, ‘Quadra Esportiva’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Piscina Semi-Olímpica’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Piscina Aprendizagem’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Espaço de Convivência Área Sul’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Teatro de Bolso’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Quiosque Área Sul’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Quiosque I - Área Norte’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Quiosque II - Área Norte’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Sala de Ensaio da Orquestra’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Espaço Cultural’);
-INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, ‘Quiosque 1’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, ‘Quiosque 2’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, ‘Praça’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Bosque de Pinus da UFSCar’); 
-INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, ‘Represa do Rio Monjolinho’); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Ginásio de Esportes'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Campo de Futebol'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, 'Campo de Futebol 01'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, 'Campo de Futebol 02'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, 'Quadra Esportiva'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (3, NULL, 'Quadra Esportiva'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Piscina Semi-Olímpica'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Piscina Aprendizagem'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Espaço de Convivência Área Sul'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Teatro de Bolso'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Quiosque Área Sul'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Quiosque I - Área Norte'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Quiosque II - Área Norte'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Sala de Ensaio da Orquestra'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Espaço Cultural');
+INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, 'Quiosque 1'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, 'Quiosque 2'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (2, NULL, 'Praça'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Bosque de Pinus da UFSCar'); 
+INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Represa do Rio Monjolinho'); 
 
