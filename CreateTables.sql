@@ -44,8 +44,8 @@ CREATE TABLE IF NOT EXISTS pro_reitoria_professor(
     cargo VARCHAR NOT NULL,
     
     CONSTRAINT pro_reitoria_professor_pk PRIMARY KEY (prof_id, preitoria_id),
-    CONSTRAINT preitoria_professor__prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
-    CONSTRAINT preitoria_professor__preitoria_id_fk FOREIGN KEY (preitoria_id) REFERENCES pro_reitoria (preitoria_id)
+    CONSTRAINT preitoria_professor_prof_id_fk FOREIGN KEY (prof_id) REFERENCES professor (prof_id),
+    CONSTRAINT preitoria_professor_preitoria_id_fk FOREIGN KEY (preitoria_id) REFERENCES pro_reitoria (preitoria_id)
 );
 
 CREATE TABLE IF NOT EXISTS reitoria_professor(
