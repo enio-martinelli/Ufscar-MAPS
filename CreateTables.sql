@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS laboratorio (
 	lab_id INTEGER GENERATED ALWAYS AS IDENTITY,
 	nome VARCHAR NOT NULL,
 	localizacao GEOMETRY,
-	sigla VARCHAR NOT NULL,
+	sigla VARCHAR,
 	
 	CONSTRAINT laboratorio_pk PRIMARY KEY (lab_id)
 );
