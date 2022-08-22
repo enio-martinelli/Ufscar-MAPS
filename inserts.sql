@@ -156,6 +156,75 @@ INSERT INTO area (campus_id, localizacao, nome) VALUES (3, NULL, 'Praça');
 INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Bosque de Pinus da UFSCar'); 
 INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Represa do Rio Monjolinho'); 
 
+--- inserções esporte ---
+INSERT INTO esporte (area_id, esporte_praticado) 
+(SELECT area_id, 'Futsal e Ginástica' FROM area a WHERE a.nome = 'Ginásio de Esportes'); 
+
+INSERT INTO esporte (area_id, esporte_praticado) 
+(SELECT area_id, 'Futebol' FROM area a WHERE a.nome = 'Campo de Futebol'); 
+
+INSERT INTO esporte (area_id, esporte_praticado) 
+(SELECT area_id, 'Natação' FROM area a WHERE a.nome = 'Piscina Semi-Olímpica' AND a.campus_id = 1);
+
+INSERT INTO esporte (area_id, esporte_praticado) 
+(SELECT area_id, 'Natação' FROM area a WHERE a.nome = 'Piscina Aprendizagem' AND a.campus_id = 1); 
+
+INSERT INTO esporte (area_id, esporte_praticado) 
+(SELECT area_id, 'Futebol' FROM area a WHERE a.nome = 'Campo de Futebol 01' AND a.campus_id = 2); 
+
+INSERT INTO esporte (area_id, esporte_praticado) 
+(SELECT area_id, 'Futebol' FROM area a WHERE a.nome = 'Campo de Futebol 02' AND a.campus_id = 2); 
+
+INSERT INTO esporte (area_id, esporte_praticado) 
+(SELECT area_id, 'Basquete' FROM area a WHERE a.nome = 'Quadra Esportiva' AND a.campus_id = 2); 
+
+INSERT INTO esporte (area_id, esporte_praticado) 
+(SELECT area_id, 'Quadra Esportiva' FROM area a WHERE a.nome = 'Quadra Esportiva' AND a.campus_id = 3);
+
+--- inserções lazer ---
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Piscina Semi-Olímpica' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Piscina Aprendizagem' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Espaço de Convivência Área Sul' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Teatro de Bolso' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Quiosque Área Sul' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Quiosque I - Área Norte' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Quiosque II - Área Norte' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Sala de Ensaio da Orquestra' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Espaço Cultural' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Quiosque 1' AND a.campus_id = 3); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Quiosque 2' AND a.campus_id = 3); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Praça' AND a.campus_id = 3);
+
+--- inserções reserva_natural ---
+INSERT INTO reserva_natural (area_id, bioma) 
+(SELECT area_id, 'Mata Atlântica' FROM area a WHERE a.nome = 'Bosque de Pinus da UFSCar' AND a.campus_id = 1); 
+
+INSERT INTO reserva_natural (area_id, bioma) 
+(SELECT area_id, 'Mata Atlântica' FROM area a WHERE a.nome = 'Represa do Rio Monjolinho' AND a.campus_id = 1); 
+
 -- inserções laboratorio
 INSERT INTO laboratorio (nome, sigla)
 VALUES
