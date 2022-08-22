@@ -57,57 +57,57 @@ VALUES
 ('ProAd', 1, 'Pró-Reitoria de Administração');
 
 --- inserções reitoria_professor ---
-INSERT INTO reitoria_professor (prof_id, reitoria_id, perIodo, cargo)
-(SELECT prof_id, 1, '2020-Atual', 'Reitora' FROM professor WHERE nome='Ana Beatriz de Oliveira');
+INSERT INTO reitoria_professor (prof_id, reitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, 1, '2020', '2024', 'Reitora' FROM professor WHERE nome='Ana Beatriz de Oliveira');
 
-INSERT INTO reitoria_professor (prof_id, reitoria_id, perIodo, cargo)
-(SELECT prof_id, 1, '2021-Atual', 'Vice-Reitora' FROM professor WHERE nome='Maria de Jesus Dutra dos Reis');
+INSERT INTO reitoria_professor (prof_id, reitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, 1, '2021', '2025', 'Vice-Reitora' FROM professor WHERE nome='Maria de Jesus Dutra dos Reis');
 
 --- inserção pro_reitoria_professor ---
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2021-Atual', 'Pró-Reitor de Graduação' FROM professor p, pro_reitoria pr WHERE p.nome='Daniel Rodrigo Leiva' AND pr.sigla_preitoria='ProGrad');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2021', '2025', 'Pró-Reitor de Graduação' FROM professor p, pro_reitoria pr WHERE p.nome='Daniel Rodrigo Leiva' AND pr.sigla_preitoria='ProGrad');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2021-Atual', 'Pró-Reitora Adjunta de Graduação' FROM professor p, pro_reitoria pr WHERE p.nome='Luciana Cristina Salvatti Coutinho' AND pr.sigla_preitoria='ProGrad');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2021', '2025', 'Pró-Reitora Adjunta de Graduação' FROM professor p, pro_reitoria pr WHERE p.nome='Luciana Cristina Salvatti Coutinho' AND pr.sigla_preitoria='ProGrad');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2021-Atual', 'Pró-Reitor de Pesquisa' FROM professor p, pro_reitoria pr WHERE p.nome='Pedro Sergio Fadini' AND pr.sigla_preitoria='ProPq');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2021', '2025', 'Pró-Reitor de Pesquisa' FROM professor p, pro_reitoria pr WHERE p.nome='Pedro Sergio Fadini' AND pr.sigla_preitoria='ProPq');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2021-Atual', 'Pró-Reitora Adjunta de Pesquisa' FROM professor p, pro_reitoria pr WHERE p.nome='Diana Junkes Bueno Martha' AND pr.sigla_preitoria='ProPq');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2021', '2025', 'Pró-Reitora Adjunta de Pesquisa' FROM professor p, pro_reitoria pr WHERE p.nome='Diana Junkes Bueno Martha' AND pr.sigla_preitoria='ProPq');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2021-Atual', 'Pró-Reitor de Pós-Graduação' FROM professor p, pro_reitoria pr WHERE p.nome='Rodrigo Constante Martins' AND pr.sigla_preitoria='ProPG');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2021', '2025', 'Pró-Reitor de Pós-Graduação' FROM professor p, pro_reitoria pr WHERE p.nome='Rodrigo Constante Martins' AND pr.sigla_preitoria='ProPG');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2021-Atual', 'Pró-Reitor Adjunto de Pós-Graduação' FROM professor p, pro_reitoria pr WHERE p.nome='Luiz Eduardo Moschini' AND pr.sigla_preitoria='ProPG');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2021', '2025', 'Pró-Reitor Adjunto de Pós-Graduação' FROM professor p, pro_reitoria pr WHERE p.nome='Luiz Eduardo Moschini' AND pr.sigla_preitoria='ProPG');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, null, 'Pró-Reitora de Extensão' FROM professor p, pro_reitoria pr WHERE p.nome='Ducinei Garcia' AND pr.sigla_preitoria='ProEx');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, null, null, 'Pró-Reitora de Extensão' FROM professor p, pro_reitoria pr WHERE p.nome='Ducinei Garcia' AND pr.sigla_preitoria='ProEx');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2020-Atual', 'Pró-Reitor Adjunto de Extensão' FROM professor p, pro_reitoria pr WHERE p.nome='Fábio Gonçalves Pinto' AND pr.sigla_preitoria='ProEx');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2020', '2024', 'Pró-Reitor Adjunto de Extensão' FROM professor p, pro_reitoria pr WHERE p.nome='Fábio Gonçalves Pinto' AND pr.sigla_preitoria='ProEx');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2016-Atual', 'Pró-Reitora de Administração' FROM professor p, pro_reitoria pr WHERE p.nome='Edna Hércules Augusto' AND pr.sigla_preitoria='ProAd');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2016', '2024', 'Pró-Reitora de Administração' FROM professor p, pro_reitoria pr WHERE p.nome='Edna Hércules Augusto' AND pr.sigla_preitoria='ProAd');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2021-Atual', 'Pró-Reitor Adjunto de Administração' FROM professor p, pro_reitoria pr WHERE p.nome='Luiz Manoel Almeida' AND pr.sigla_preitoria='ProAd');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2021', '2025', 'Pró-Reitor Adjunto de Administração' FROM professor p, pro_reitoria pr WHERE p.nome='Luiz Manoel Almeida' AND pr.sigla_preitoria='ProAd');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, null, 'Pró-Reitora Adjunta de Administração' FROM professor p, pro_reitoria pr WHERE p.nome='Izaura do Carmo Alcoforado' AND pr.sigla_preitoria='ProAd');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, null, null, 'Pró-Reitora Adjunta de Administração' FROM professor p, pro_reitoria pr WHERE p.nome='Izaura do Carmo Alcoforado' AND pr.sigla_preitoria='ProAd');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2021-Atual', 'Pró-Reitora de Gestão de Pessoas' FROM professor p, pro_reitoria pr WHERE p.nome='Jeanne Liliane Marlene Michel' AND pr.sigla_preitoria='ProGPe');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2021', '2025', 'Pró-Reitora de Gestão de Pessoas' FROM professor p, pro_reitoria pr WHERE p.nome='Jeanne Liliane Marlene Michel' AND pr.sigla_preitoria='ProGPe');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, null, 'Pró-Reitor Adjunto de Gestão de Pessoas' FROM professor p, pro_reitoria pr WHERE p.nome='Antônio Roberto de Carvalho' AND pr.sigla_preitoria='ProGPe');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, null, null, 'Pró-Reitor Adjunto de Gestão de Pessoas' FROM professor p, pro_reitoria pr WHERE p.nome='Antônio Roberto de Carvalho' AND pr.sigla_preitoria='ProGPe');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, '2021-Atual', 'Pró-Reitor de Assuntos Comunitários e Estudantis' FROM professor p, pro_reitoria pr WHERE p.nome='Djalma Ribeiro Júnior' AND pr.sigla_preitoria='ProACE');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, '2021', '2025', 'Pró-Reitor de Assuntos Comunitários e Estudantis' FROM professor p, pro_reitoria pr WHERE p.nome='Djalma Ribeiro Júnior' AND pr.sigla_preitoria='ProACE');
 
-INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, perIodo, cargo)
-(SELECT prof_id, preitoria_id, null, 'Pró-Reitora Adjunta de Assuntos Comunitários e Estudantis' FROM professor p, pro_reitoria pr WHERE p.nome='Gisele Aparecida Zutin Castelani' AND pr.sigla_preitoria='ProACE');
+INSERT INTO pro_reitoria_professor (prof_id, preitoria_id, ano_inicio, ano_termino, cargo)
+(SELECT prof_id, preitoria_id, null, null, 'Pró-Reitora Adjunta de Assuntos Comunitários e Estudantis' FROM professor p, pro_reitoria pr WHERE p.nome='Gisele Aparecida Zutin Castelani' AND pr.sigla_preitoria='ProACE');
 
 
 --- inserções centro ---
@@ -122,7 +122,7 @@ VALUES ('CCET', 1, 'Centro de Ciências Exatas e de Tecnologia', NULL, '16 3351-
 ('CCN', 1, 'Centro de Ciências da Natureza', NULL, NULL);
 
 --- inserções centro_professor ---
-INSERT INTO centro_professor (prof_id, centro_id, periodo, cargo)
+INSERT INTO centro_professor (prof_id, centro_id, ano_inicio, ano_termino, cargo)
 VALUES ('18', '2', '8/10/2018 – atual', 'diretor'), ('19', '2', '8/10/2018 – atual', 'vice-diretor'),
 ('20', '1', NULL, 'diretor'), ('21', '1', NULL, 'vice-diretor'), 
 ('22', '4', '2018-2022', 'diretor'), ('23', '4', '2018-2022', 'vice-diretor'), 

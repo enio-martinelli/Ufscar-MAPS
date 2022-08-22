@@ -189,8 +189,8 @@ CREATE TABLE  IF NOT EXISTS construcao (
 	nome VARCHAR NOT NULL, 
 
 	CONSTRAINT construcao_pk PRIMARY KEY (construcao_id), 
-	CONSTRAINT construcao_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id),
-	CONSTRAINT construcao_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
+	CONSTRAINT construcao_campus_id_fk FOREIGN KEY (campus_id) REFERENCES campus (campus_id),
+	CONSTRAINT construcao_dept_id_fk FOREIGN KEY (dept_id) REFERENCES departamento (dept_id)
 	
 );
 
