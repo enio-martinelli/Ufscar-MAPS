@@ -315,11 +315,9 @@ INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Salas de Estudo em Grupo e Laboratório de Informática');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Unidade de Simulação de Práticas Profissionais da Saúde');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Reservatório Área Sul');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Reservatório Área Norte');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Reservatório Área Norte');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Reservatório Área Norte');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Reservatório de Água - Área Norte (em frente ao Lamav)');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Central de Serviços Terceirizados');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Central de Serviços Terceirizados');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Central de Serviços Terceirizados');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Central de Resíduos - Amplicação');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Central de Resíduos - Depósito de Produtos Químicos');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Central de Resíduos - Depósito de Produtos Radioativos');  
@@ -331,19 +329,19 @@ INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Pórtico de Acesso Washington Luís - Área Sul');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Pórtico de Acesso Norte - Área Norte');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Pórtico de Acesso Leste - Babilônia');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Anexo do Departamento de Morfologia e Patologia'); /*FLAG DEPT*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Anexo I – Departamento de Ecologia e Biologia Evolutiva'); /*FLAG DEPT*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Anexo II – Departamento de Ecologia e Biologia Evolutiva'); /*FLAG DEPT*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Anexo III – Departamento de Ecologia e Biologia Evolutiva'); /*FLAG DEPT*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Anexo I – Departamento de Hidrobiologia'); /*FLAG DEPT*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Anexo II – Departamento de Hidrobiologia'); /*FLAG DEPT*/  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Anexo do Departamento de Morfologia e Patologia' FROM departamento d WHERE d.dept_sigla = 'DMP'); 
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Anexo I – Departamento de Ecologia e Biologia Evolutiva' FROM departamento d WHERE d.dept_sigla = 'DEBE');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Anexo II – Departamento de Ecologia e Biologia Evolutiva' FROM departamento d WHERE d.dept_sigla = 'DEBE');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Anexo III – Departamento de Ecologia e Biologia Evolutiva' FROM departamento d WHERE d.dept_sigla = 'DEBE'); 
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Anexo I – Departamento de Hidrobiologia' FROM departamento d WHERE d.dept_sigla = 'DHb');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Anexo II – Departamento de Hidrobiologia' FROM departamento d WHERE d.dept_sigla = 'DHb');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Arquivo de História Contemporânea');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Núcleo de Pesquisa e Documentação');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Coordenações de Cursos');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'SINTUFSCar');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Pavilhão de Acesso SINTUFSCar');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Programa de Pós-Graduação em Educação Especial');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Passarela Coberta entre A6 e A7');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Passarela Coberta entre A6 e A7' FROM departamento d WHERE d.dept_sigla = 'DFMC');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Sanitário Público');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Alojamento - Módulo III');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Alojamento - Módulo IV');  
@@ -354,43 +352,42 @@ INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Alojamento - Módulo XV');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Conjunto de Salas de Aula Sul - Babilônia');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Conjunto de Salas de Aula Sul - Babilônia II');   
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'ADUFSCar');   
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Vestiário do Pavilhão de Ginástica / Laboratório Didático de Condicionamento Físico');   
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Vestiário do Pavilhão de Ginástica / Laboratório Didático de Condicionamento Físico' FROM departamento d WHERE d.dept_sigla = 'DEFMH');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Pavilhão de Ginástica');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Secretaria de Informática');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Anfiteatro Área Norte – Bento Prado');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Sala de Apoio do Anfiteatro Área Norte – Bento Prado');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Vigilância - Guarita (Transfederônica)');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Universidade Aberta do Brasil');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Gabinete de Docentes e Laboratórios');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Diretoria do Centro de Ciências Exatas e Tecnológicas');   
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Passarela');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Circulação DEP/DEQ'); /*FLAG DEPT*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Passarelas DEQ'); /*FLAG DEPT*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Passarela 1 e Sanitários');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Passarela 2 e Sanitários');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'LIvraria da EdUFSCar');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Passarela');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Passarela e Sanitários');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Estação Climatológica');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Gabinete de Docentes e Laboratórios' FROM departamento d WHERE d.dept_sigla = 'DF');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Diretoria do Centro de Ciências Exatas e Tecnológicas');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Passarela' FROM departamento d WHERE d.dept_sigla = 'DF');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Circulação DEP/DEQ' FROM departamento d WHERE d.dept_sigla = 'DEQ');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Passarelas DEQ' FROM departamento d WHERE d.dept_sigla = 'DEQ');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Passarela 1 e Sanitários' FROM departamento d WHERE d.dept_sigla = 'DEMa');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Passarela 2 e Sanitários' FROM departamento d WHERE d.dept_sigla = 'DEMa');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Livraria da EdUFSCar');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Passarela' FROM departamento d WHERE d.dept_sigla = 'DQ');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Passarela e Sanitários' FROM departamento d WHERE d.dept_sigla = 'DECiv');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Estação Climatológica' FROM departamento d WHERE d.dept_sigla = 'DECiv');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Banco do Brasil');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Caixa Eletrônico do Banco Santander (Área Sul)');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Banco Santander (Área Norte)');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Estação de Psicultura - DHB');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Anexo de Estação de Psicultura - DHB');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Programa de Pós-Graduação em Química');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Auditório do Programa de Pós-Graduação em Química');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Programa de Pós-Graduação em Engenharia Civil');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Estação de Psicultura - DHb' FROM departamento d WHERE d.dept_sigla = 'DHb');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Anexo de Estação de Psicultura - DHb' FROM departamento d WHERE d.dept_sigla = 'DHb');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Programa de Pós-Graduação em Química' FROM departamento d WHERE d.dept_sigla = 'DQ');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Auditório do Programa de Pós-Graduação em Química' FROM departamento d WHERE d.dept_sigla = 'DQ');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Programa de Pós-Graduação em Engenharia Civil' FROM departamento d WHERE d.dept_sigla = 'DECiv');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'UAB');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Oficina Mecânica'); /*FLAG DEPT*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edifício da ALCOA'); /*FLAG DEPT*/  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Oficina Mecânica' FROM departamento d WHERE d.dept_sigla = 'DEMa');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Edifício da ALCOA' FROM departamento d WHERE d.dept_sigla = 'DEMa');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edífico de Aulas Teóricas 4');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edifício de Aulas Teóricas 10');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edíficio de Aulas Teóricas 5');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edifício de Aulas Teóricas 6');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edifício de Aulas Teóricas 7');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edifício de Aulas Teóricas 8');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edifício de Salas de Aulas Teóricas 9');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edifício de Aulas Teóricas 9');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Garagem (FAI)');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Centro de Reprodução Gráfica');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Núcleo de Extensão - UFSCar/ESCOLA');  
@@ -399,7 +396,7 @@ INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Núcleo de Extensão (3) - Cidadania');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Núcleo de Extensão (4) - INCOOP');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Núcleo de Extensão (5) - Sala de Múltiplo Uso');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Oficina do Baja'); /*FLAG DEPT*/  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL,'Oficina do Baja' FROM departamento d WHERE d.dept_sigla = 'DEMa');
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Unidade de Saúde Escola Bloco 1 - Pólo de Capacitação Bloco 2 - Consultas');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Unidade de Saúde Escola Bloco 3 - Unidade Apoio Programas Bloco 4 - Fisioterapia');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Unidade de Saúde Escola Bloco 5 - Administração Bloco 6 - Oficinas');  
@@ -412,21 +409,21 @@ INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Vivência Estudantil');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Vivência AEN');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Unidade de Simulação de Práticas Profissionais da Saúde');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'NUULEN');  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'NULEEN');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Edifício Petrobrás');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Núcleo de Apoio à Pesquisa');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'INCT-HYMPAR');  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Complexo de Laboratórios Multidisciplinares de Estudos Estratégicos e Avançados');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Centro de Inferência Aplicada – Departamento de Estatística'); /*FLAG DEPT*/  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Centro de Inferência Aplicada – Departamento de Estatística'); 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL,'Fundação de Apoio Institucional – Etapa 2');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Departamento de Estatística - Anexo'); /*FLAG DEPT*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'NET-PRE Anexo');  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Central de GLP e Núcleo de Serviço'); /*FLAG DEPT -> DEQ*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Central de Gás Liquefeito de Petróleo'); /*FLAG DEPT -> DEMa*/   
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Núcleos de Serviços'); /*FLAG DEPT -> DQ*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Depósitos de Produtos Químicos 01'); /*não tinha o número*/ /*FLAG DEPT -> DQ*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Depósito de Produtos Químicos 02'); /*não tinha o número*/ /*FLAG DEPT -> DQ*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Auditório do Departamento de Educação Especial (REUNI – Etapa 3)'); /*não tinha o número*/ /*FLAG DEPT -> não sei se é flag mesmo*/  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL, 'Departamento de Estatística - Anexo' FROM departamento d WHERE d.dept_sigla = 'DEs');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL, 'NET-PRE Anexo' FROM departamento d WHERE d.dept_sigla = 'DECiv'); 
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL, 'Central de GLP e Núcleo de Serviço' FROM departamento d WHERE d.dept_sigla = 'DEQ');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL, 'Central de Gás Liquefeito de Petróleo' FROM departamento d WHERE d.dept_sigla = 'DEMa');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL, 'Núcleos de Serviços' FROM departamento d WHERE d.dept_sigla = 'DQ'); 
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL, 'Depósitos de Produtos Químicos 01' FROM departamento d WHERE d.dept_sigla = 'DQ');  /*não tinha o número*/ 
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL, 'Depósito de Produtos Químicos 02' FROM departamento d WHERE d.dept_sigla = 'DQ');  /*não tinha o número*/ 
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Auditório do Departamento de Educação Especial (REUNI – Etapa 3)'); /*não tinha o número*/ 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'ADUFSCar');  
 
 /*A PARTIR DAQUI É REFERENTE AO CAMPUS ARARAS - 2*/   
@@ -488,7 +485,8 @@ INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, NULL,'Ampliação Salas de Aulas AT01');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, NULL,'Passarela e Implantar');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, NULL,'Salas de Professores');   
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, NULL,'Sindicato'); INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, NULL,'Creche');   
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, NULL,'Sindicato');
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, NULL,'Creche');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, NULL,'Serviços de Apoio');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, NULL, 'Agência Bancária');   
 
@@ -552,8 +550,8 @@ INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Oficina Mecânica / Eletrônica');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Cabine de Energia - SIn');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Casa de Máquinas - RU');   
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Casa de Compressores 01'); /*era só casa de compressores (CCET DQ)*/  
-INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Casa de Compressores 02'); /*era só casa de compressores (CCET DQ)*/  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL, 'Casa de Compressores 01' FROM departamento d WHERE d.dept_sigla = 'DQ');  /*era só casa de compressores*/  
+INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, dept_id, NULL, 'Casa de Compressores 02' FROM departamento d WHERE d.dept_sigla = 'DQ');  /*era só casa de compressores*/  
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Coordenadoria Especial do Meio Ambiente');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Divisão de Informática e Controle Acadêmico');   
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 1, NULL, NULL, 'Editora EdUFSCar');   
