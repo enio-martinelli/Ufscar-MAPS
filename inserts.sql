@@ -132,7 +132,42 @@ VALUES ('18', '2', '8/10/2018 – atual', 'diretor'), ('19', '2', '8/10/2018 –
 ('30', '7', NULL, 'diretor'), ('31', '7', NULL, 'vice-diretor'), 
 ('32', '8', NULL, 'diretor'), ('33', '8', NULL, 'vice-diretor');
 
+--- inserções departamento ---
+INSERT INTO departamento (dept_sigla, centro_id, nome, localizacao, site, telefone, email) VALUES
 
+    --- CCA ---
+    ('DDR', (SELECT centro_id FROM centro WHERE sigla_centro='CCA'), 'Departamento de Desenvolvimento Rural', NULL, NULL, NULL, NULL),
+    ('DBPVA', (SELECT centro_id FROM centro WHERE sigla_centro='CCA'), 'Departamento dE Biotecnologia e Produção Vegetal e Animal', NULL, NULL, NULL, NULL),
+    ('DCNME', (SELECT centro_id FROM centro WHERE sigla_centro='CCA'), 'Departamento de Ciências da Natureza, Matemática e Educação', NULL, NULL, NULL, NULL),
+    ('DRNPA', (SELECT centro_id FROM centro WHERE sigla_centro='CCA'), 'Departamento de Recursos Naturais e Proteção Ambiental', NULL, NULL, NULL, NULL),
+    ('DTAiSER', (SELECT centro_id FROM centro WHERE sigla_centro='CCA'), 'Departamento de Tecnologia Agroindustrial e Socioeconomia Rural', NULL, NULL, NULL, NULL),
+    
+    --- CCBS ---
+    ('DB', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Botânica', NULL, 'www.db.ufscar.br', '(16) 3351 8308', 'db@ufscar.br'),
+    ('DCAm', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Ciências Ambientais', NULL, 'www.dcam.ufscar.br', '(16) 3351-9776', 'dcam@ufscar.br'),
+    ('DCF', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Ciências Fisiológicas', NULL, 'www.dcf.ufscar.br/pt-br', '(16) 3351-8327', 'dcf@ufscar.br'),
+    ('DEBE', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Ecologia e Biologia Evolutiva', NULL, NULL, '(16) 3351-8322', 'secdebe@ufscar.br'),
+    ('DEFMH', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Educação Físcia e Motricidade Humana', NULL, 'www.educacaofisica.ufscar.br/', '(16) 3351-8294', 'ccef@ufscar.br'),
+    ('DEnf', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Enfermagem', NULL, 'www.denf.ufscar.br', '(16) 3351-8334', 'denf@ufscar.br'),
+    ('DFisio', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Fisioterapia', NULL, 'www.dfisio.ufscar.br', '(16) 3351-8341', 'dfisio@ufscar.br'),
+    ('DGE', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Genética e Evolução', NULL, 'www.dge.ufscar.br', '(16) 3351-8377', 'dge@ufscar.br'),
+    ('DGero', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Gerontologia', NULL, 'www.gerontologia.ufscar.br', '(16) 3306-6675', 'gerontologia@ufscar.br'),
+    ('DHb', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Hidrobiologia', NULL, 'www.dhb.ufscar.br', '(16) 3351-8310', 'secdhb@ufscar.br'),
+    ('DMed', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Medicina', NULL, 'www.dmed.ufscar.br', '(16) 3351-8340', 'dmed@ufscar.br'),
+    ('DMP', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Morfologia e Patologia', NULL, 'www.dmp.ufscar.br', '(16) 3351-8325', 'dmed@ufscar.br'),
+    ('DTO', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Terapia Ocupacional', NULL, 'www.dto.ufscar.br', '(16) 3351-8342', 'secdto@ufscar.br');
+    
+    --- CCET ---
+    
+    --- CCGT ---
+    
+    --- CCHB ---
+    
+    --- CCTS ---
+    
+    --- CECH ---
+    
+   
 
 --- inserções area --- ordem: esporte -> lazer -> reserva_natural
 INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Ginásio de Esportes'); 
