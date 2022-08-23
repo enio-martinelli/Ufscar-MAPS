@@ -622,6 +622,55 @@ INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 3, NULL, 
 INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 4, NULL, NULL, 'Bloco 01 - Refeitório'); 
 
 
+--- inserções apoio_academico ---
+
+
+
+
+--- inserções administrativo ---
+
+
+
+--- inserções alimentacao ---
+
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS SÃO CARLOS*/ 
+
+INSERT INTO alimentacao (construcao_id, horario_funcionamento)
+(SELECT construcao_id, 'De segunda à sexta-feira das 11h15 às 13h30 e das 17h15 às 19h00. De sábado das 11h30 às 13h00' FROM construcao c WHERE c.nome = 'Restaurante Universitário - RU'); 
+
+INSERT INTO alimentacao (construcao_id, horario_funcionamento)
+(SELECT construcao_id, 'De segunda à sexta-feira das 11h15 às 13h30 e das 17h15 às 19h00. De sábado das 11h30 às 13h00' FROM construcao c WHERE c.nome = 'Ampliação do Restaurante Universitário');  
+
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS ARARAS*/ 
+
+INSERT INTO alimentacao (construcao_id, horario_funcionamento)
+(SELECT construcao_id, NULL FROM construcao c WHERE c.nome = 'Lanchonete');
+
+INSERT INTO alimentacao (construcao_id, horario_funcionamento)
+(SELECT construcao_id, NULL FROM construcao c WHERE c.nome = 'Cantina');
+
+INSERT INTO alimentacao (construcao_id, horario_funcionamento)
+(SELECT construcao_id, 'Segunda à sexta-feira, das 11h00 às 13h30 e das 18h00 às 19h30' FROM construcao c WHERE c.nome = 'Restaurante Universitário'); 
+
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS SOROCABA*/ 
+
+INSERT INTO alimentacao (construcao_id, horario_funcionamento)
+(SELECT construcao_id, 'Segunda à sexta-feira, das 11h00 às 13h30 e das 17h30 às 19h00. Sábados das 11h00 às 13h00' FROM construcao c WHERE c.nome = 'Restaurante Universitário'); 
+
+INSERT INTO alimentacao (construcao_id, horario_funcionamento)
+(SELECT construcao_id, 'Segunda à sexta-feira, das 11h00 às 13h30 e das 17h30 às 19h00. Sábados das 11h00 às 13h00' FROM construcao c WHERE c.nome = 'Ampliação do Refeitório do RU'); 
+
+INSERT INTO alimentacao (construcao_id, horario_funcionamento)
+(SELECT construcao_id, NULL FROM construcao c WHERE c.nome = 'Restaurante 2'); 
+
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS LAGOA DO SINO - 4*/  
+
+INSERT INTO alimentacao (construcao_id, horario_funcionamento)
+(SELECT construcao_id, NULL FROM construcao c WHERE c.nome = 'Bloco 01 - Refeitório'); 
+
+
+
+
 --- inserções laboratorio ---
 INSERT INTO laboratorio (nome, sigla)
 VALUES
