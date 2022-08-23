@@ -158,7 +158,7 @@ INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Represa do Rio
 
 --- inserções esporte ---
 INSERT INTO esporte (area_id, esporte_praticado) 
-(SELECT area_id, 'Futsal e Ginástica' FROM area a WHERE a.nome = 'Ginásio de Esportes'); 
+(SELECT area_id, 'Futsal, Ginástica, Vôlei, Basquete' FROM area a WHERE a.nome = 'Ginásio de Esportes'); 
 
 INSERT INTO esporte (area_id, esporte_praticado) 
 (SELECT area_id, 'Futebol' FROM area a WHERE a.nome = 'Campo de Futebol'); 
@@ -176,10 +176,10 @@ INSERT INTO esporte (area_id, esporte_praticado)
 (SELECT area_id, 'Futebol' FROM area a WHERE a.nome = 'Campo de Futebol 02' AND a.campus_id = 2); 
 
 INSERT INTO esporte (area_id, esporte_praticado) 
-(SELECT area_id, 'Basquete' FROM area a WHERE a.nome = 'Quadra Esportiva' AND a.campus_id = 2); 
+(SELECT area_id, 'Futebol, Vôlei, Basquete' FROM area a WHERE a.nome = 'Quadra Esportiva' AND a.campus_id = 2); 
 
 INSERT INTO esporte (area_id, esporte_praticado) 
-(SELECT area_id, 'Quadra Esportiva' FROM area a WHERE a.nome = 'Quadra Esportiva' AND a.campus_id = 3);
+(SELECT area_id, 'Futebol, Vôlei, Basquete' FROM area a WHERE a.nome = 'Quadra Esportiva' AND a.campus_id = 3);
 
 --- inserções lazer ---
 INSERT INTO lazer (area_id, capacidade) 
@@ -217,6 +217,24 @@ INSERT INTO lazer (area_id, capacidade)
 
 INSERT INTO lazer (area_id, capacidade) 
 (SELECT area_id, NULL FROM area a WHERE a.nome = 'Praça' AND a.campus_id = 3);
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Ginásio de Esportes' AND a.campus_id = 1); 
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Campo de Futebol' AND a.campus_id = 1);
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Campo de Futebol 01' AND a.campus_id = 2);
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Campo de Futebol 02' AND a.campus_id = 2);
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Quadra Esportiva' AND a.campus_id = 2);
+
+INSERT INTO lazer (area_id, capacidade) 
+(SELECT area_id, NULL FROM area a WHERE a.nome = 'Quadra Esportiva' AND a.campus_id = 3);
 
 --- inserções reserva_natural ---
 INSERT INTO reserva_natural (area_id, bioma) 
