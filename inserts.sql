@@ -134,7 +134,6 @@ VALUES ('18', '2', '8/10/2018 – atual', 'diretor'), ('19', '2', '8/10/2018 –
 
 --- inserções departamento ---
 INSERT INTO departamento (dept_sigla, centro_id, nome, localizacao, site, telefone, email) VALUES
-
     --- CCA ---
     ('DDR', (SELECT centro_id FROM centro WHERE sigla_centro='CCA'), 'Departamento de Desenvolvimento Rural', NULL, NULL, NULL, NULL),
     ('DBPVA', (SELECT centro_id FROM centro WHERE sigla_centro='CCA'), 'Departamento dE Biotecnologia e Produção Vegetal e Animal', NULL, NULL, NULL, NULL),
@@ -155,20 +154,49 @@ INSERT INTO departamento (dept_sigla, centro_id, nome, localizacao, site, telefo
     ('DHb', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Hidrobiologia', NULL, 'www.dhb.ufscar.br', '(16) 3351-8310', 'secdhb@ufscar.br'),
     ('DMed', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Medicina', NULL, 'www.dmed.ufscar.br', '(16) 3351-8340', 'dmed@ufscar.br'),
     ('DMP', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Morfologia e Patologia', NULL, 'www.dmp.ufscar.br', '(16) 3351-8325', 'dmed@ufscar.br'),
-    ('DTO', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Terapia Ocupacional', NULL, 'www.dto.ufscar.br', '(16) 3351-8342', 'secdto@ufscar.br');
+    ('DTO', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Terapia Ocupacional', NULL, 'www.dto.ufscar.br', '(16) 3351-8342', 'secdto@ufscar.br'),
     
     --- CCET ---
+    ('DC', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Computação', NULL, 'site.dc.ufscar.br', '(16) 3351-8232', 'dc@ufscar.br'),
+    ('DECiv', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Engenharia Civil', NULL, 'www.deciv.ufscar.br', '(16) 3351-8262/3351-8263', 'deciv@ufscar.br'),
+    ('DEE', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Engenharia Elétrica', NULL, 'www.dee.ufscar.br', '(16) 3351- 9701', 'dee@ufscar.br'),
+    ('DEMec', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Engenharia Mecânica', NULL, 'www.mecanica.ufscar.br', '(16) 3506-1874', 'demec@ufscar.br'),
+    ('DEMa', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Engenharia de Materiais', NULL, 'www.dema.ufscar.br', '(16) 3351-8244', 'demachef@ufscar.br'),
+    ('DEP', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Engenharia de Produção', NULL, 'www.dep.ufscar.br', '(16) 3351-9510/3351-8296', 'silvia@dep.ufscar.br/natalia@dep.ufscar.br'),
+    ('DEQ', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Engenharia Química', NULL, 'www.deq.ufscar.br', '(16) 3351-8264', 'deqchefe@ufscar.br'),
+    ('DEs', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Estatística', NULL, 'www.des.ufscar.br', '(16) 3351-8241', 'deschefe@ufscar.br'),
+    ('DF', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Física', NULL, 'www.df.ufscar.br', '(16) 3351-8223', 'dfchefe@ufscar.br'),
+    ('DM', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Matemática', NULL, 'www.dm.ufscar.br', '(16) 3351-8220', 'secretaria.dm@ufscar.br'),
+    ('DQ', (SELECT centro_id FROM centro WHERE sigla_centro='CCET'), 'Departamento de Química', NULL, 'www.dq.ufscar.br', '(16) 3351-8206/3351-8350', 'dqchefe@ufscar.br'),
     
     --- CCGT ---
+    ('DAdm-So', (SELECT centro_id FROM centro WHERE sigla_centro='CCGT'), 'Departamento de Administração', NULL, 'www.dadm.ufscar.br', '(15) 3229-5933', 'dadm@ufscar.br'),
+    ('DComp-So', (SELECT centro_id FROM centro WHERE sigla_centro='CCGT'), 'Departamento de Computação', NULL, 'www.dcomp.ufscar.br', '(15) 3229-7443', 'soniavieira@ufscar.br'),
+    ('DECo-So', (SELECT centro_id FROM centro WHERE sigla_centro='CCGT'), 'Departamento de Economia', NULL, 'www.economia.ufscar.br', '(15) 3229-7444', 'deco-ufscar@ufscar.br'),
+    ('DEP-So', (SELECT centro_id FROM centro WHERE sigla_centro='CCGT'), 'Departamento de Engenharia de Produção de Sorocaba', NULL, 'www.depso.ufscar.br', '(15) 3229-5905', 'depso@ufscar.br'),
     
     --- CCHB ---
+    ('DBio-So', (SELECT centro_id FROM centro WHERE sigla_centro='CCHB'), 'Departamento de Biologia', NULL, NULL, NULL, NULL),
+    ('DCHE-So', (SELECT centro_id FROM centro WHERE sigla_centro='CCHB'), 'Departamento de Ciências Humanas e Educação', NULL, 'www.dche.ufscar.br', '(15) 3229 5959', NULL),
+    ('DGHT-So', (SELECT centro_id FROM centro WHERE sigla_centro='CCHB'), 'Departamento de Geografia, Turismo e Humanidades', NULL, 'www.dgth.ufscar.br', '(15) 3229-5972', 'dgth@ufscar.br'),
     
     --- CCTS ---
+    ('DCA-So', (SELECT centro_id FROM centro WHERE sigla_centro='CCTS'), 'Departamento de Ciências Ambientais', NULL, 'www.dca-so.ufscar.br', '(15) 3229-8875', 'dca@ufscar.br'),
+    ('DFQM-So', (SELECT centro_id FROM centro WHERE sigla_centro='CCTS'), 'Departamento de Física, Química e Matemática', NULL, 'www.dfqm.ufscar.br', '(15) 3229-6166', 'dfqm@ufscar.br'),
     
     --- CECH ---
-    
+    ('DAC', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Artes e Comunicação', NULL, 'www.dac.ufscar.br', NULL, NULL),
+    ('DCI', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Ciência da Informação', NULL, 'www.dci.ufscar.br', '(16)3351-8374', NULL),
+    ('DCSo', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Ciências Sociais', NULL, 'www.dcso.ufscar.br', '(16) 3351-8369', 'd-dcso@ufscar.br'),
+    ('DEd', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Educação', NULL, 'www.ded.ufscar.br', '(16) 3351-8365', 'secded@ufscar.br'),
+    ('DFMC', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Filosofia e Metodologia das Ciências', NULL, 'www.dfil.ufscar.br', NULL, NULL),
+    ('DL', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Letras', NULL, 'www.dl.ufscar.br', '(16) 3351-8358', 'dlufscar@gmail.com'),
+    ('DME', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Metodologia de Ensino', NULL, 'www.dme.ufscar.br', '(16) 3351-8373', 'dme@ufscar.br'),
+    ('DPsi', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Psicologia', NULL, 'www.dpsi.ufscar.br', '(16) 3351-8361', 'dpsic@ufscar.br'),
+    ('DS', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Sociologia', NULL, 'www.ds.ufscar.br', '(16)3306-6515', 'ds@ufscar.br'),
+    ('DTPP', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Teorias Práticas e Pedagógicas', NULL, 'www.dtpp.ufscar.br', '(16) 3543-2582', 'dtpp@ufscar.br');
    
-
+   
 --- inserções area --- ordem: esporte -> lazer -> reserva_natural
 INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Ginásio de Esportes'); 
 INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Campo de Futebol'); 
