@@ -671,11 +671,282 @@ INSERT INTO construcao (campus_id, dept_id, localizacao, nome) (SELECT 4, NULL, 
 
 --- inserções apoio_academico ---
 
+/*REFERENTE AO CAMPUS SAO CARLOS*/ 
 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Serviços bibliotecários e Anfiteatro' FROM construcao c WHERE c.nome = 'Biblioteca Comunitária / Teatro Florestan Fernandes'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prover atendimento às crianças' FROM construcao c WHERE c.nome = 'Unidade de Atendimento à Criança');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prover atendimento às crianças' FROM construcao c WHERE c.nome = 'Unidade de Atendimento à Criança - Ampliação');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prover atendimento e apoio físico às crianças' FROM construcao c WHERE c.nome = 'Unidade de Atendimento à Criança - Quadra');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sanitário' FROM construcao c WHERE c.nome = 'Sanitários AT03');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Área de estudos gerais' FROM construcao c WHERE c.nome = 'Salas de Estudo em Grupo e Laboratório de Informática');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prática de procedimentos relacionados à saúde' FROM construcao c WHERE c.nome = 'Unidade de Simulação de Práticas Profissionais da Saúde');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Caixa de água' FROM construcao c WHERE c.nome = 'Reservatório Área Sul');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Caixa de água' FROM construcao c WHERE c.nome = 'Reservatório Área Norte'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Caixa de água' FROM construcao c WHERE c.nome = 'Reservatório de Água - Área Norte (em frente ao Lamav)'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Gerenciar serviços terceirizados' FROM construcao c WHERE c.nome = 'Central de Serviços Terceirizados');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Manipulação de Resíduos' FROM construcao c WHERE c.nome = 'Central de Resíduos - Amplicação'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Manipulação de Resíduos Químicos' FROM construcao c WHERE c.nome = 'Central de Resíduos - Depósito de Produtos Químicos'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Manipulação de Resíduos Radioativos' FROM construcao c WHERE c.nome = 'Central de Resíduos - Depósito de Produtos Radioativos');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Manipulação de Resíduos Reciclaveis' FROM construcao c WHERE c.nome = 'Central de Resíduos - Depósito de Material Reciclável');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Administração de Manipulação de Resíduos' FROM construcao c WHERE c.nome = 'Central de Resíduos - Administração');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Manipulação de Resíduos de Combustão' FROM construcao c WHERE c.nome = 'Central de Resíduos - Depósito de Combustíveis');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Controle de Máquinas de Piscinas' FROM construcao c WHERE c.nome = 'Casa de Máquinas / Piscina');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Cábine Elétrica' FROM construcao c WHERE c.nome = 'Cabine de Elétrica (AEN)'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Portaria da Área Sul' FROM construcao c WHERE c.nome = 'Pórtico de Acesso Washington Luís - Área Sul');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Portaria da Área Norte' FROM construcao c WHERE c.nome = 'Pórtico de Acesso Norte - Área Norte'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Portaria de Acesso Leste' FROM construcao c WHERE c.nome = 'Pórtico de Acesso Leste - Babilônia');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ampliação do Departamento de Morfologia e Patologia' FROM construcao c WHERE c.nome = 'Anexo do Departamento de Morfologia e Patologia');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ampliação do Departamento de Ecologia e Biologia Evolutiva' FROM construcao c WHERE c.nome = 'Anexo I – Departamento de Ecologia e Biologia Evolutiva');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ampliação do Departamento de Ecologia e Biologia Evolutiva' FROM construcao c WHERE c.nome = 'Anexo II – Departamento de Ecologia e Biologia Evolutiva');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ampliação do Departamento de Ecologia e Biologia Evolutiva' FROM construcao c WHERE c.nome = 'Anexo III – Departamento de Ecologia e Biologia Evolutiva');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ampliação do Departamento de Hidrobiologia' FROM construcao c WHERE c.nome = 'Anexo I – Departamento de Hidrobiologia');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ampliação do Departamento de Hidrobiologia' FROM construcao c WHERE c.nome = 'Anexo II – Departamento de Hidrobiologia');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Armazenar arquivos históricos' FROM construcao c WHERE c.nome = 'Arquivo de História Contemporânea');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Centro para realização e documentação de pesquisa' FROM construcao c WHERE c.nome = 'Núcleo de Pesquisa e Documentação');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Coordenar os cursos de graduação' FROM construcao c WHERE c.nome = 'Coordenações de Cursos');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sindicato dos Trabalhadores Técnicos-Administrativos da Universidade Federal de São Carlos' FROM construcao c WHERE c.nome = 'SINTUFSCar'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Acesso à SINTUFSCar' FROM construcao c WHERE c.nome = 'Pavilhão de Acesso SINTUFSCar');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Programa de Pós-Graduação em Educação Especial' FROM construcao c WHERE c.nome = 'Programa de Pós-Graduação em Educação Especial'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Passagem coberta entre ATs' FROM construcao c WHERE c.nome = 'Passarela Coberta entre A6 e A7');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sanitário' FROM construcao c WHERE c.nome = 'Sanitário Público'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia Estudantil' FROM construcao c WHERE c.nome = 'Alojamento - Módulo III'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia Estudantil' FROM construcao c WHERE c.nome = 'Alojamento - Módulo IV'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia Estudantil' FROM construcao c WHERE c.nome = 'Alojamento - Módulo V');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia Estudantil' FROM construcao c WHERE c.nome = 'Alojamento - Módulo VI');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia Estudantil' FROM construcao c WHERE c.nome = 'Alojamento - Módulo VII'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia Estudantil' FROM construcao c WHERE c.nome = 'Alojamento - Módulo VIII'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia Estudantil' FROM construcao c WHERE c.nome = 'Alojamento - Módulo XV'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Salas de aula para estudantes na Área Sul' FROM construcao c WHERE c.nome = 'Conjunto de Salas de Aula Sul - Babilônia');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Salas de aula para estudantes na Área Sul' FROM construcao c WHERE c.nome = 'Conjunto de Salas de Aula Sul - Babilônia II');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Vestiário' FROM construcao c WHERE c.nome = 'Vestiário do Pavilhão de Ginástica / Laboratório Didático de Condicionamento Físico');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Pavilhão de Ginástica' FROM construcao c WHERE c.nome = 'Pavilhão de Ginástica');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Gerenciar demandas de TI e serviços disponíveis' FROM construcao c WHERE c.nome = 'Secretaria de Informática');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ambiente para reuniõe, palestras e apresentações' FROM construcao c WHERE c.nome = 'Anfiteatro Área Norte – Bento Prado'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ambiente para reuniõe, palestras e apresentações' FROM construcao c WHERE c.nome = 'Sala de Apoio do Anfiteatro Área Norte – Bento Prado');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Vigilância' FROM construcao c WHERE c.nome = 'Vigilância - Guarita (Transfederônica)');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Cursos da UAB' FROM construcao c WHERE c.nome = 'Universidade Aberta do Brasil');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Gabinete para professores e estruturas para laboratórios' FROM construcao c WHERE c.nome = 'Gabinete de Docentes e Laboratórios');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Dirigir o Centro de Ciências Exatas e Tecnológicas' FROM construcao c WHERE c.nome = 'Diretoria do Centro de Ciências Exatas e Tecnológicas');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Conexão de caminhos' FROM construcao c WHERE c.nome = 'Passarela');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Caminho entre o Departamento de Engenharia de Produção e o Departamento de Engenharia Química' FROM construcao c WHERE c.nome = 'Circulação DEP/DEQ');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Passarelas para circulação no Departamento de Engenharia Química' FROM construcao c WHERE c.nome = 'Passarelas DEQ');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Passarela para circulação e sanitários' FROM construcao c WHERE c.nome = 'Passarela 1 e Sanitários'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Passarela para circulação e sanitários' FROM construcao c WHERE c.nome = 'Passarela 2 e Sanitários'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Livraria do Campus São Carlos' FROM construcao c WHERE c.nome = 'LIvraria da EdUFSCar');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Conexão de caminhos' FROM construcao c WHERE c.nome = 'Passarela');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Passarela para circulação e banheiros' FROM construcao c WHERE c.nome = 'Passarela e Sanitários'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Estação para coleta de dados climatológicos' FROM construcao c WHERE c.nome = 'Estação Climatológica'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Agência bancária na área sul' FROM construcao c WHERE c.nome = 'Banco do Brasil');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Caixa eletronico na área sul' FROM construcao c WHERE c.nome = 'Caixa Eletrônico do Banco Santander (Área Sul)'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Agência bancária na área norte' FROM construcao c WHERE c.nome = 'Banco Santander (Área Norte)');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Estação de Psicultura' FROM construcao c WHERE c.nome = 'Estação de Psicultura - DHb'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Estação de Psicultura' FROM construcao c WHERE c.nome = 'Anexo de Estação de Psicultura - DHb');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Programa de pós-graduação em Química' FROM construcao c WHERE c.nome = 'Programa de Pós-Graduação em Química');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Auditório do Programa de pós-graduação em Química' FROM construcao c WHERE c.nome = 'Auditório do Programa de Pós-Graduação em Química');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Programa de pós-graduação em Engenharia Civil' FROM construcao c WHERE c.nome = 'Programa de Pós-Graduação em Engenharia Civil');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Cursos da Universidade Aberta do Brasil (Antigo AT03)' FROM construcao c WHERE c.nome = 'UAB');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Oficina Mecânica do Departamento de Engenharia de Materias do Campus São Carlos' FROM construcao c WHERE c.nome = 'Oficina Mecânica');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Laboratório de Materiais Refratários' FROM construcao c WHERE c.nome = 'Edifício da ALCOA');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Edífico de Aulas Teóricas 4');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Edifício de Aulas Teóricas 10');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Edíficio de Aulas Teóricas 5');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Edifício de Aulas Teóricas 6'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Edifício de Aulas Teóricas 7');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Edifício de Aulas Teóricas 8'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Edifício de Aulas Teóricas 9');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Garagem' FROM construcao c WHERE c.nome = 'Garagem (FAI)'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Local para cópia e impressão de documentos' FROM construcao c WHERE c.nome = 'Centro de Reprodução Gráfica');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo de extensão' FROM construcao c WHERE c.nome = 'Núcleo de Extensão - UFSCar/ESCOLA');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo de extensão - Saúde' FROM construcao c WHERE c.nome = 'Núcleo de Extensão (1) - Saúde');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo de extensão - Empresa' FROM construcao c WHERE c.nome = 'Núcleo de Extensão (2) - Empresa');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo de extensão - Cidadania' FROM construcao c WHERE c.nome = 'Núcleo de Extensão (3) - Cidadania'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo de extensão - INCOOP' FROM construcao c WHERE c.nome = 'Núcleo de Extensão (4) - INCOOP');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo de extensão - Uso Múltiplo' FROM construcao c WHERE c.nome = 'Núcleo de Extensão (5) - Sala de Múltiplo Uso');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Oficina' FROM construcao c WHERE c.nome = 'Oficina do Baja');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Um dos blocos da Unidade de Saúde Escola (USE) referente à consultas' FROM construcao c WHERE c.nome = 'Unidade de Saúde Escola Bloco 1 - Pólo de Capacitação Bloco 2 - Consultas');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Um dos blocos da Unidade de Saúde Escola (USE) referente à fisioterapia' FROM construcao c WHERE c.nome = 'Unidade de Saúde Escola Bloco 3 - Unidade Apoio Programas Bloco 4 - Fisioterapia'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Um dos blocos da Unidade de Saúde Escola (USE) referente à oficinas' FROM construcao c WHERE c.nome = 'Unidade de Saúde Escola Bloco 5 - Administração Bloco 6 - Oficinas');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Um dos blocos da Unidade de Saúde Escola (USE) referente ao atendimento de crianças' FROM construcao c WHERE c.nome = 'Unidade de Saúde Escola Bloco 7 - Serviços Bloco 8 - Atendimentos à Criança / UENAPES');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Conexão de caminhos na Unidade de Saúde Escola' FROM construcao c WHERE c.nome = 'Unidade de Saúde Escola - Passarela');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo Multidisciplinar Integrado de Estudos, Formação e Intervenção em Economia Solidária' FROM construcao c WHERE c.nome = 'Núcleo Multidisciplinar Integrado de Estudos, Formação e Intervenção em Economia Solidária - NuMI-EcoSol Antiga Incubadora Regional de Cooperativas Populares - INCOOP'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Coordenadoria de Comunicação Social' FROM construcao c WHERE c.nome = 'Rádio e TV / Coordenadoria de Comunicação Social');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo de Formação de Professores' FROM construcao c WHERE c.nome = 'Núcleo de Formação de Professores – Blocos A e C');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Fundação de desenvolvimento institucional, científico, tecnológico e de estímulo à inovação' FROM construcao c WHERE c.nome = 'Fundação de Apoio Institucional');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Vivência Estudantil' FROM construcao c WHERE c.nome = 'Vivência Estudantil');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Cabine de Elétrica da Vivência estudantil' FROM construcao c WHERE c.nome = 'Vivência AEN'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Unidade de Simulação de Práticas Profissionais da Saúde' FROM construcao c WHERE c.nome = 'Unidade de Simulação de Práticas Profissionais da Saúde');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo de Laboratórios de Ensino à Engenharia - Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'NULEEN');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Centro de Pesquisas em Materiais Avançados e Energia' FROM construcao c WHERE c.nome = 'Edifício Petrobrás');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Responsável por gerenciar o apoio às pesquisas que são desenvolvidas na universidade' FROM construcao c WHERE c.nome = 'Núcleo de Apoio à Pesquisa');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Instituto Nacional de Ciência e Tecnologia dos Hymenoptera Parasitoides' FROM construcao c WHERE c.nome = 'INCT-HYMPAR');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Laboratórios multidisciplinares' FROM construcao c WHERE c.nome = 'Complexo de Laboratórios Multidisciplinares de Estudos Estratégicos e Avançados');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para aulas teóricas presenciais do curso de Estatística' FROM construcao c WHERE c.nome = 'Centro de Inferência Aplicada – Departamento de Estatística');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Fundação de Apoio Institucional' FROM construcao c WHERE c.nome = 'Fundação de Apoio Institucional – Etapa 2');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Anexo do Departamento de Estatística' FROM construcao c WHERE c.nome = 'Departamento de Estatística - Anexo'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Anexo do NET-PRE' FROM construcao c WHERE c.nome = 'NET-PRE Anexo');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Central de serviços' FROM construcao c WHERE c.nome = 'Central de GLP e Núcleo de Serviço'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Central de serviços' FROM construcao c WHERE c.nome = 'Central de Gás Liquefeito de Petróleo'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Central de serviços' FROM construcao c WHERE c.nome = 'Núcleos de Serviços'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Depósito de produtos químicos' FROM construcao c WHERE c.nome = 'Depósitos de Produtos Químicos 01'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Depósito de produtos químicos' FROM construcao c WHERE c.nome = 'Depósito de Produtos Químicos 02');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Auditório do Departamento de Educação Especial' FROM construcao c WHERE c.nome = 'Auditório do Departamento de Educação Especial (REUNI – Etapa 3)'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sindicato dos Docentes em Instituições Federais de Ensino Superior dos Municípios de São Carlos, Araras, Sorocaba e Buri' FROM construcao c WHERE c.nome = 'ADUFSCar');
 
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS ARARAS - 2*/  
+
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Vestiário do campo de futebol 01' FROM construcao c WHERE c.nome = 'Vestiário do Campo 01');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Vestiário do campo de futebol 02' FROM construcao c WHERE c.nome = 'Vestiário do Campo 02'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Aula' FROM construcao c WHERE c.nome = 'Sala de Aula 01');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Aula' FROM construcao c WHERE c.nome = 'Sala de Aula 02');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Aula' FROM construcao c WHERE c.nome = 'Sala de Aula Microscopia 01');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Aula' FROM construcao c WHERE c.nome = 'Sala de Aula Microscopia 02');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia' FROM construcao c WHERE c.nome = 'Uso Residencial - Caseiro'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Grupo de Pesquisa' FROM construcao c WHERE c.nome = 'Grupo de Pesquisa e Trabalhos Agropecuários'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Grupo de Pesquisa' FROM construcao c WHERE c.nome = 'Grupo de Pesquisa e Trabalhos Agropecuários - Apoio');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Professores' FROM construcao c WHERE c.nome = 'Sala de Docentes 01');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Professores' FROM construcao c WHERE c.nome = 'Sala de Docentes 02');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Professores' FROM construcao c WHERE c.nome = 'Sala de Docentes 03');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Professores' FROM construcao c WHERE c.nome = 'Sala de Docentes 04');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Professores' FROM construcao c WHERE c.nome = 'Sala de Docentes 05');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Professores' FROM construcao c WHERE c.nome = 'Sala de Docentes 06');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Edifício de uso pelos docentes' FROM construcao c WHERE c.nome = 'Casa da Colônia - Uso dos Professores');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Casa da Colônia' FROM construcao c WHERE c.nome = 'Casa da Colônia - Uso do Caseiro');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Casa da Colônia' FROM construcao c WHERE c.nome = 'Casa da Colônia - Identificar Uso 01');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Casa da Colônia' FROM construcao c WHERE c.nome = 'Casa da Colônia - Identificar Uso 02');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Casa da Colônia' FROM construcao c WHERE c.nome = 'Casa da Colônia - Identificar Uso 03');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Casa da Colônia' FROM construcao c WHERE c.nome = 'Casa da Colônia - Uso dos Funcionários da FAI');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Biblioteca' FROM construcao c WHERE c.nome = 'Biblioteca Central'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Extensão da Biblioteca' FROM construcao c WHERE c.nome = 'Anexo - Biblioteca Central');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ambulatório' FROM construcao c WHERE c.nome = 'Ambulatório - A Construir');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala de Professor' FROM construcao c WHERE c.nome = 'Salas de Professores');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Auditório' FROM construcao c WHERE c.nome = 'Auditório');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Portaria' FROM construcao c WHERE c.nome = 'Portaria 01');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Portaria' FROM construcao c WHERE c.nome = 'Portaria 02');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Balança' FROM construcao c WHERE c.nome = 'Balança');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Programa de Melhoramento Genético de Cana-de-Açúcar' FROM construcao c WHERE c.nome = 'Edifício PMGCA');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Galpão para as Máquinas' FROM construcao c WHERE c.nome = 'Galpão de Máquinas da LaGEM');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Oficina mecânica' FROM construcao c WHERE c.nome = 'Oficina Mecânica da LaGEM');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Biblioteca' FROM construcao c WHERE c.nome = 'Biblioteca Setorial do Prédio Central - Edifício Gilberto Miller Azzi');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Coordenação do curso de Biotecnologia' FROM construcao c WHERE c.nome = 'Coordenação do Curso de Biotecnologia - Edifício Gilberto Miller Azzi');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Coordenação do curso de Engenharia Agronômica' FROM construcao c WHERE c.nome = 'Coordenação do Curso de Engenharia Agronômica - Edifício Gilberto Miller Azzi');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Auditório' FROM construcao c WHERE c.nome = 'Auditório - Edifício Gilberto Miller Azzi');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Salas de Aulas e Laboratórios de Informática' FROM construcao c WHERE c.nome = 'Salas de Aulas e Laboratórios de Informática');
+
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS SOROCABA - 3*/  
+
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia' FROM construcao c WHERE c.nome = 'Área de Vivência');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Moradia' FROM construcao c WHERE c.nome = 'Ampliação da Área de Vivência');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para aulas teóricas presencias' FROM construcao c WHERE c.nome = 'Aulas Teóricas AT02');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para aulas teóricas presencias' FROM construcao c WHERE c.nome = 'Ampliação Aulas Teóricas AT02');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Biblioteca' FROM construcao c WHERE c.nome = 'Biblioteca');/*Biblioteca*/  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Vestiários da quadra esportiva' FROM construcao c WHERE c.nome = 'Vestiários da Quadra');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sala dos professores' FROM construcao c WHERE c.nome = 'Sala de Docentes'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Oficina' FROM construcao c WHERE c.nome = 'Oficina de Ensino'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Núcleo de Educação, Tecnologia e Cultura, consiste em um conjunto de princípios e pressupostos que o configuram como estratégia de reforço de ações de democratização do ensino da universidade, assim como de fortalecimento do campus e interação com a região' FROM construcao c WHERE c.nome = 'NETC (Térreo)');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Aulas teóricas e laboratórios' FROM construcao c WHERE c.nome = 'Edifício de Aulas Teóricas e Laboratórios'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Cabine do edifício de aulas teóricas e laboratórios' FROM construcao c WHERE c.nome = 'Cabine AT LAB');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ambulatório' FROM construcao c WHERE c.nome = 'Ambulatório');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Ambulatório' FROM construcao c WHERE c.nome = 'Ampliação Ambulatório');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Salas de Aulas AT01'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Ampliação Salas de Aulas AT01');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Conexão entre caminhos' FROM construcao c WHERE c.nome = 'Passarela e Implantar'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Salas para os professores' FROM construcao c WHERE c.nome = 'Salas de Professores'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Sindicato' FROM construcao c WHERE c.nome = 'Sindicato'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Creche' FROM construcao c WHERE c.nome = 'Creche');  
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Serviços de Apoio' FROM construcao c WHERE c.nome = 'Serviços de Apoio'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Agência bancaria' FROM construcao c WHERE c.nome = 'Agência Bancária');  
+
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS LAGOA DO SINO - 4*/  
+
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Bloco dos professores' FROM construcao c WHERE c.nome = 'Bloco 02 – Docentes'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Bloco 03 – Salas de Aulas Teóricas 01 (AT1)');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Prédio para as aulas teóricas presenciais' FROM construcao c WHERE c.nome = 'Salas de Aulas Teóricas 02 (AT2) (antiga garagem de máquinas agrícolas)'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Local para a impressão e a cópia de documentos' FROM construcao c WHERE c.nome = 'Serviço Terceirizado de Fotocopia (antigo posto)');
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Centro educacional de ciclo básico' FROM construcao c WHERE c.nome = 'Ciclo Básico'); 
+INSERT INTO apoio_academico (construcao_id, proposito) (SELECT construcao_id, 'Laboratórios' FROM construcao c WHERE c.nome = 'Bloco 01 - Laboratórios');
+ 
 
 --- inserções administrativo ---
 
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS SÃO CARLOS - 1*/ 
+
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Manutenção de edifícios' FROM construcao c WHERE c.nome = 'Seção Administrativa Edifícios / Manutenção'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Garagem para máquinas' FROM construcao c WHERE c.nome = 'Seção de Urbanização (Garagem para Máquinas)'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerenciar transportes' FROM construcao c WHERE c.nome = 'Seção de Transportes'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Vigilância' FROM construcao c WHERE c.nome = 'Seção de Vigilância'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerenciar móveis e utensílios' FROM construcao c WHERE c.nome = 'Seção de Móveis e Utensílios'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerenciar a pintura de edifícios' FROM construcao c WHERE c.nome = 'Seção de Pintura - PU'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Realizar manutenção' FROM construcao c WHERE c.nome = 'Sala de Manutenção - PU'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Observar fenômenos espaciais' FROM construcao c WHERE c.nome = 'Observatório'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Clínica para emergências' FROM construcao c WHERE c.nome = 'Ambulatório AEN'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Prédio desocupado' FROM construcao c WHERE c.nome = 'Desocupado Antiga Clínica de Fisioterapia'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Prédio desocupado' FROM construcao c WHERE c.nome = 'Desocupado Antigo Laboratório de Neurociências'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Diretoria do Centro de Ciências Humanas' FROM construcao c WHERE c.nome = 'Diretoria do Centro de Ciências Humanas'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Portal para professores' FROM construcao c WHERE c.nome = 'Portal dos Professores / NEAB E NIASI'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Prédio desocupado' FROM construcao c WHERE c.nome = 'Centrinho Desocupado DEnf'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerencia questões jurídicas da universidade' FROM construcao c WHERE c.nome = 'Procuradoria Jurídica'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerencia o desenvolvimento físico' FROM construcao c WHERE c.nome = 'Escritório de Desenvolvimento Físico'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerencia a execução de ações orientadas para o atendimento das demandas da comunidade universitária, principalmente na manutenção da infraestrutura física do Campus' FROM construcao c WHERE c.nome = 'Prefeitura Universitária'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Extensão da Prefeitura Universitária' FROM construcao c WHERE c.nome = 'PU - EDF - Ampliação'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Guarita da Prefeitura Universitária do Campus São Carlos' FROM construcao c WHERE c.nome = 'Guarita Prefeitura Universitária'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Depósito da prefeitura universitária do Campus São Carlos' FROM construcao c WHERE c.nome = 'Depósito Prefeitura Universitária'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Unidade de Manutenção Elétrica do Campus São Carlos' FROM construcao c WHERE c.nome = 'Manutenção Elétrica - PU'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Oficina Mecânica / Elétrica do Campus São Carlos' FROM construcao c WHERE c.nome = 'Oficina Mecânica / Eletrônica'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Cabine de Energia da Secretaria Geral de Informática do Campus São Carlos' FROM construcao c WHERE c.nome = 'Cabine de Energia - SIn'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Casa de Máquinas do Restaurante Universitário do Campus São Carlos' FROM construcao c WHERE c.nome = 'Casa de Máquinas - RU'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerenciamento de Compressores' FROM construcao c WHERE c.nome = 'Casa de Compressores 01');
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerenciamento de Compressores' FROM construcao c WHERE c.nome = 'Casa de Compressores 02');
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Responsável por tratar de quesitos ambientais da universidade' FROM construcao c WHERE c.nome = 'Coordenadoria Especial do Meio Ambiente'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Controlar as informações digitais referentes aos alunos e professores' FROM construcao c WHERE c.nome = 'Divisão de Informática e Controle Acadêmico'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Editora de livros' FROM construcao c WHERE c.nome = 'Editora EdUFSCar'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Prédio que estende a Reitoria' FROM construcao c WHERE c.nome = 'Edifício Anexo à Reitoria'); 
+
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerenciamento de compressores' FROM construcao c WHERE c.nome = 'Casa de Compressores 02'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Responsável por tratar de quesitos ambientais da universidade' FROM construcao c WHERE c.nome = 'Coordenadoria Especial do Meio Ambiente'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Controlar as informações digitais referentes aos alunos e professores' FROM construcao c WHERE c.nome = 'Divisão de Informática e Controle Acadêmico'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Editora' FROM construcao c WHERE c.nome = 'Editora EdUFSCar'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Prédio que estende a Reitoria' FROM construcao c WHERE c.nome = 'Edifício Anexo à Reitoria'); 
+
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS ARARAS - 2*/ 
+
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Diretoria de Apoio Institucional' FROM construcao c WHERE c.nome = 'Diretoria Fundação de Apoio Institucional Administração Laboratórios Psicólogo Assistente Social'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Garagem' FROM construcao c WHERE c.nome = 'Seção de Transportes / Garagem de Veículos e de Máquinas'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa de Vidro'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa de Madeira'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa 01');
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa 02'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa 03');
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa 04'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa 05');
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa 06');
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa 07');
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa 08'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Estufa' FROM construcao c WHERE c.nome = 'Estufa 09');
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Posto Meteorológico' FROM construcao c WHERE c.nome = 'Posto Meteorológico'); 
+
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS SOROCABA - 3*/ 
+
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Cabine de Energia' FROM construcao c WHERE c.nome = 'Cabine de Energia'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Cabine de Comunicação' FROM construcao c WHERE c.nome = 'Cabine de Comunicação'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerenciar as questões acadêmicas da universidade' FROM construcao c WHERE c.nome = 'Gestão Acadêmica'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Gerenciar as questões administrativas da universidade' FROM construcao c WHERE c.nome = 'Gestão Administrativa'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Guarita' FROM construcao c WHERE c.nome = 'Guarita'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Pórtico' FROM construcao c WHERE c.nome = 'Pórtico (Cobertura)'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Cozinha do Restaurante Universitário' FROM construcao c WHERE c.nome = 'Ampliação da Cozinha do RU'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Poço Artesiano' FROM construcao c WHERE c.nome = 'Poço Artesiano SAAE'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Reservatório de Água' FROM construcao c WHERE c.nome = 'Reservatório de Água'); 
+
+/*A PARTIR DAQUI É REFERENTE AO CAMPUS LAGOA DO SINO - 4*/ 
+
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Prédio direcionado a questões administrativas do campus' FROM construcao c WHERE c.nome = 'Bloco 04 - Administração Central'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Guarita' FROM construcao c WHERE c.nome = 'Guarita Armazém'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Armazem para grãos' FROM construcao c WHERE c.nome = 'Armazém de Grãos'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Mina de Água' FROM construcao c WHERE c.nome = 'Mina de Água'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Caixa de Água' FROM construcao c WHERE c.nome = 'Caixa de Água'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Reservatório de Água do campus' FROM construcao c WHERE c.nome = 'Reservatório Metálico de Água'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Garagem para máquinas agrícolas' FROM construcao c WHERE c.nome = 'Garagem de Máquinas Agrícolas'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Abrigo de gás' FROM construcao c WHERE c.nome = 'Abrigo de Gás'); 
+INSERT INTO administrativo (construcao_id, funcao_administrativa) (SELECT construcao_id, 'Casa de força inativa' FROM construcao c WHERE c.nome = 'Casa de força (desativada)'); 
 
 
 --- inserções alimentacao ---
