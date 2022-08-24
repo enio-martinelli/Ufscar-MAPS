@@ -196,7 +196,7 @@ INSERT INTO departamento (dept_sigla, centro_id, nome, localizacao, site, telefo
     ('DS', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Sociologia', NULL, 'www.ds.ufscar.br', '(16)3306-6515', 'ds@ufscar.br'),
     ('DTPP', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Teorias Práticas e Pedagógicas', NULL, 'www.dtpp.ufscar.br', '(16) 3543-2582', 'dtpp@ufscar.br');
    
-   --- inserções curso_graduacao ---
+--- inserções curso_graduacao ---
 INSERT INTO curso_graduacao (dept_id, nome_cg) VALUES
     ((SELECT dept_id FROM departamento WHERE dept_sigla='DAC'), 'Educação Musical'),
     ((SELECT dept_id FROM departamento WHERE dept_sigla='DAC'), 'Imagem e som'),
