@@ -1210,4 +1210,12 @@ VALUES
 ('Laboratório de Materiais e Dispositivos', NULL),
 --  Departamento de Matemática (DM),
 --  Departamento de Química (DQ),
-('-Laboratório de Instrumentação para o Ensino de Química', NULL),
+('-Laboratório de Instrumentação para o Ensino de Química', NULL)
+
+
+
+
+
+--- inserções transito --- (por enquanto não tem -> fica pra etapa seguinte com a obtenção das geometrias)
+
+
