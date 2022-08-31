@@ -1411,9 +1411,565 @@ VALUES
 ('Laboratório de Materiais e Dispositivos', NULL),
 --  Departamento de Matemática (DM),
 --  Departamento de Química (DQ),
-('-Laboratório de Instrumentação para o Ensino de Química', NULL)
+('Laboratório de Instrumentação para o Ensino de Química', NULL)
 
-
+--- inserções dept_gerencia_lab ---
+--Centro de Ciências Biológicas e da Saúde
+--  Departamento de Educação Física e Motricidade Humana
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Biomecânica do Movimento Humano') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Educação Física e Motricidade Humana') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Comportamento Motor') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Educação Física e Motricidade Humana') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Inovação e Empreendedorismo em Tecnologia Assistiva, Esporte e Saúde') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Educação Física e Motricidade Humana') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Adaptações Neuromusculares') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Educação Física e Motricidade Humana') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Núcleo de Estudos em Atividade Física Adaptada') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Educação Física e Motricidade Humana') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Grupo de Estudos e Pesquisas dos Aspectos Pedagógicos e Sociais do Futebol') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Educação Física e Motricidade Humana') d
+--  Departamento de Fisioterapia
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Análise da Função Articular') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Análise do Desenvolvimento Infantil') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Avaliação do Desenvolvimento Funcional') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Avaliação e Intervenção do Complexo do Ombro') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Avaliação e Intervenção em Ortopedia e Traumatologia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Cinesiologia Clínica e Ocupacional') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Dinamometria Isocinética') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Espirometria e Fisioterapia Respiratória') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos em Epidemiologia e Envelhecimento') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Fisioterapia Preventiva e Ergonomia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Neurociências') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Pesquisa em Fisioterapia Neurológica') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Pesquisa em Recursos Fisioterapêuticos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Pesquisa em Reumatologia e Reabilitação da Mão') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Pesquisa em Saúde da Mulher') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Plasticidade Muscular') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório Multidisciplinar de Pesquisa em Saúde do Idoso') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Núcleo de Pesquisas em Exercício Físico') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Fisioterapia Cardiovascular') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Fisioterapia Cardiopulmonar') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Núcleo Multidisciplinar de Análise do Movimento') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Fisioterapia') d
+--  Departamento de Terapia Ocupacional
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório Atividades Humanas e Terapia Ocupacional') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Terapia Ocupacional') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Análise Funcional e Ajudas Técnicas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Terapia Ocupacional') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Atividade e Desenvolvimento') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Terapia Ocupacional') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Terapia Ocupacional e Saúde Mental') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Terapia Ocupacional') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório Metuia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Terapia Ocupacional') d
+--  Departamento de Enfermagem
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos e Pesquisa sobre Cuidado Interdisciplinar à Saúde da Mulher') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Enfermagem') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos e Pesquisa sobre Organização Hospitalar e Cuidados') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Enfermagem') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos e Pesquisa sobre Políticas e Práticas em Saúde') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Enfermagem') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos e Pesquisa sobre Sistematização de Assistência em Enfermagem') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Enfermagem') d
+--  Departamento de Morfologia e Patologia
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Ensino de Anatomia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Morfologia e Patologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Inflamação e Doenças Infecciosas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Morfologia e Patologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Microbiologia e Biomoléculas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Morfologia e Patologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Patologia e Biocompatibilidade') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Morfologia e Patologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Microbiologia e Parasitologia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Morfologia e Patologia') d
+--  Departamento de Ecologia e Biologia Evolutiva
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos de Hymenoptera Parasitoides') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ecologia e Biologia Evolutiva') d 
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos Subterrâneos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ecologia e Biologia Evolutiva') d	 
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Ictiologia Sistemática') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ecologia e Biologia Evolutiva') d 
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Limnologia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ecologia e Biologia Evolutiva') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Microbiologia Laboratório de Paleontologia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ecologia e Biologia Evolutiva') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Zoologia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ecologia e Biologia Evolutiva') d
+--  Departamento de Hidrobiologia
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Estação Experimental de Aquicultura') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Análises Químicas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Biodiversidade e Processos Microbianos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Dinâmica de Populações de Peixes / Histologia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Plâncton') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Bioensaios e Modelagem Matemática') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Macroinvertebrados Aquáticos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Ecologia da Conservação') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Análise e Planejamento Ambiental') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos sobre Sistemas Complexos Ambientais') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos Ecológicos em Etologia e Evolução') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Hidrobiologia') d
+--  Departamento de Genética e Evolução
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Bioquímica e Biologia Molecular Aplicada') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Biologia Molecular') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Biotecnologia Vegetal') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Citogenética de Peixes') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Biodiversidade Molecular e Conservação') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Genética de Populações e Evolução') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Genética de Aves') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Genética Evolutiva de Himenópteros') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Bioquímica e Genética Aplicada') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Genética e Biotecnologia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Imunologia Aplicada') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Genética de Comportamento') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Genética de Sistemas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Bioquímica e Biofísica Molecular') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Genética e Evolução') d
+--  Departamento de Ciências Fisiológicas
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Fisiologia do Exercício') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Fisiológicas') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Fisiologia e Biofísica Muscular') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Fisiológicas') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Zoofisiologia e Bioquímica Comparativa') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Fisiológicas') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Biologia Experimental') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Fisiológicas') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Farmacologia Cardiovascular') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Fisiológicas') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Bioquímica e Biologia Molecular') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Fisiológicas') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Fisiologia Endócrina e Exercício Físico') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Fisiológicas') d
+--  Departamento de Ciências Ambientais
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Geotecnologias e Conservação Ambiental') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Ambientais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Ecologia Aplicada') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Ambientais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Análise e Planejamento') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Ambientais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Educação Ambiental') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Ambientais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Estudos da Fauna') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Ambientais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Centro de Estudos em Democracia Ambiental') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Ciências Ambientais') d
+--Centro de Ciências Exatas e de Tecnologia
+--  Departamento de Computação (DC)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Algoritmos, Otimização e Combinatória') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Above Cloud Computing') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Advanced Research in Software Engineering') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Biomedical Image Processing Group') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Bioinformatics and Machine Learning Group') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Computational Intelligence Group') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Grupo de Sistemas Distribuídos e Redes') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Image and Network Analysis Group') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Linguística e Inteligência Computacional') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratory of Autonomous Robots and Intelligent Systems') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Banco de Dados') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Interação Flexível e Sustentável') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Sistemas Computacionais') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratory for Innovation on Computing and Engineering') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Mineração de Dados e Aplicações') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Computação') d
+--  Departamento de Engenharia Civil (DECiv)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Sistemas Estruturais') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Civil') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Geociências') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Civil') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Hidráulica') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Civil') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Saneamento') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Civil') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Materiais e Componentes da Construção Civil') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Civil') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório Integrado de Geotecnia, Topologia e Estradas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Civil') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Núcleo de Estudos de Pré-Fabricados') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Civil') d
+--  Departamento de Engenharia de Materiais (DEMa)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Solidificação') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Fundição') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Eletroquímica Aplicada') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Atomização e Revestimento') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório Alcoa') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Materiais Bioativos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Análises Térmicas e Termogravimétricas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Processamento de Materiais por Laser') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Metais Amorfos e Nanocristalinos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Centro de Caracterização e Desenvolvimento de Materiais') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Ensaios Mecânicos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Simulação Computacional') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Permeação e Sorção de Gases') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de FTIR/UV/Vis e Permeação') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Corrosão Munir Rachid') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Processamento de Materiais via Aquecimento Fotônico: Laser & micro-ondas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Materiais Vítreos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Reologia') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Microestrutura e Propriedades em Processos de Solidificação') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Polímeros - G5') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Microscopia Ótica') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Hidrogênio em Metais') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Caracterização Estrutural') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Materiais') d
+--  Departamento de Engenharia de Produção (DEP)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Engenharia de Produção') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Produção') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório Integrado de Engenharia de Produção') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Produção') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Trabalho em Grupo') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Produção') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Instrumentação') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Produção') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Práticas Produtivas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Produção') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Protótipos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Produção') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Ergonomia, Simulação e Projeto de Situações Produtivas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia de Produção') d
+--  Departamento de Engenharia Elétrica (DEE)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'DEE - Laboratório A') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Elétrica') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'DEE - Laboratório B') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Elétrica') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'DEE - Laboratório C') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Elétrica') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'DEE - Laboratório D') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Elétrica') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'DEE - Laboratório E') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Elétrica') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'DEE - Laboratório F') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Elétrica') d
+--  Departamento de Engenharia Mecânica (DEMec)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Engenharia Aplicada') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Mecânica') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Mecânica Computacional') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Mecânica') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Processos de Fabricação') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Mecânica') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Projeto Integrado') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Mecânica') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Ensino de Engenharias Elétrica e Mecânica') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Mecânica') d
+--  Departamento de Engenharia Química (DEQ)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Química Analítica') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Química Geral') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Química Orgânica') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Química Inorgânica') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Físico-Química') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de informática') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório Didático de Engenharia Química') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório “Aberto” de Processos Químicos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Desenvolvimento de Processos Químicos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Automação e Controle de Processos Químicos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Engenharia Química') d
+--  Departamento de Estatística (DEs)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Centro de Estudos do Risco') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Estatística') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Centro de Inferência Aplicada') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Estatística') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Núcleo de Inferência Estatística') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Estatística') d
+--  Departamento de Física (DF)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Física Experimental A') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Física Experimental B') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Física Experimental C') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Física Experimental D') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Física Moderna') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Eletrônica') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Apoio ao Ensino de Física') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Acústica Aplicada') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Semicondutores') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Correlação Angular') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Cerâmicas Ferroelétricas') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Metalurgia Física') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Física Computacional') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Supercondutividade e Magnetismo') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Microscopia Eletrônica') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Materiais e Dispositivos') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Física') d
+--  Departamento de Química (DQ)
+INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
+FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Instrumentação para o Ensino de Química') l,
+     (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Química') d
 
 
 
