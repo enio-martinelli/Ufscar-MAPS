@@ -444,7 +444,54 @@ INSERT INTO curso_graduacao (dept_id, nome_cg) VALUES
     ((SELECT dept_id FROM departamento WHERE dept_sigla='DTAiSER'), 'Engenharia Agronômica'),
     ((SELECT dept_id FROM departamento WHERE dept_sigla='DTO'), 'Terapia Ocupacional'),
     ((SELECT dept_id FROM departamento WHERE dept_sigla='DTPP'), 'Pedagogia');
-   
+  
+--- inserções curso_pos_graduacao ---
+INSERT INTO curso_pos_graduacao (dept_id, nome_cpg) VALUES
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DCAm'), 'Programa De Pós-Graduação Em Ciências Ambientais'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DTAiSER'), 'Programa De Pós-Graduação Em Agricultura E Ambiente'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DTAiSER'), 'Programa De Pós-Graduação Em Agroecologia E Desenvolvimento Rural'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DTAiSER'), 'Programa De Pós-Graduação Em Educação Em Ciências E Matemática'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DTAiSER'), 'Programa De Pós-Graduação Em Produção Vegetal E Bioprocessos Associados'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEFMH'), 'Programa De Pós-Graduação Em Educação Física'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEnf'), 'Programa De Pós-Graduação Em Enfermagem'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DFisio'), 'Programa De Pós-Graduação Em Fisioterapia'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEBE'), 'Programa De Pós-Graduação Em Genética Evolutiva E Biologia Molecular'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DGero'), 'Programa De Pós-Graduação Em Gerontologia'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DTO'), 'Programa De Pós-Graduação Em Terapia Ocupacional'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DBPVA'), 'Programa De Pós-Graduação Em Biotecnologia'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DC'), 'Programa De Pós-Graduação Em Ciência Da Computação'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEMa'), 'Programa De Pós-Graduação Em Ciência E Engenharia De Materiais'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEP'), 'Programa De Pós-Graduação Em Engenharia De Produção'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEQ'), 'Programa De Pós-Graduação Em Engenharia Química'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DECiv'), 'Programa De Pós-Graduação Em Engenharia Urbana'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DECiv'), 'Programa De Pós-Graduação Em Engenharia Civil'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DM'), 'Programa De Pós-Graduação Em Ensino De Ciências Exatas'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEs'), 'Programa Interinstitucional De Pós-Graduação Em Estatística'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DF'), 'Programa De Pós-Graduação Em Física'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DM'), 'Programa De Pós-Graduação Em Matemática'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DM'), 'Programa De Pós-Graduação Em Matemática Em Rede Nacional'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DQ'), 'Programa De Pós-Graduação Em Química'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DQ'), 'Programa De Pós-Graduação De Mestrado Profissional Em Química'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEMec'), 'Programa De Pós-Graduação Em Engenharia Mecânica'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEE'), 'Programa De Pós-Graduação Engenharia Elétrica'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DComp-So'), 'Programa De Pós-Graduação Em Ciência Da Computação'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DECo-So'), 'Programa De Pós-Graduação Em Economia'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DAdm-So'), 'Programa De Pós-Graduação Em Administração'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEd'), 'Programa De Pós-Graduação Em Educação'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DGHT-So'), 'Programa De Pós-Graduação Em Geografia'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DBPVA'), 'Programa De Pós-Graduação Em Biotecnologia E Monitoramento Ambiental'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEMa'), 'Programa De Pós-Graduação Em Ciência Dos Materiais'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DCSo'), 'Programa De Pós-Graduação Em Antropologia Social'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DCSo'), 'Programa De Pós-Graduação Em Ciência Política'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEd'), 'Programa De Pós-Graduação Profissional em Educação'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DEd'), 'Programa De Pós-Graduação Em Educação Especial'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DFMC'), 'Programa De Pós-Graduação Em Filosofia '),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DAC'), 'Programa De Pós-Graduação Em Imagem E Som'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DL'), 'Programa De Pós-Graduação Em Linguística'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DFMC'), 'Programa De Pós-Graduação Profissional Em Filosofia'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DPsi'), 'Programa De Pós-Graduação Em Psicologia'),
+    ((SELECT dept_id FROM departamento WHERE dept_sigla='DS'), 'Programa De Pós-Graduação Em Sociologia');
+
 --- inserções area --- ordem: esporte -> lazer -> reserva_natural
 INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Ginásio de Esportes'); 
 INSERT INTO area (campus_id, localizacao, nome) VALUES (1, NULL, 'Campo de Futebol'); 
@@ -1971,8 +2018,4 @@ INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
 FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Instrumentação para o Ensino de Química') l,
      (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Química') d
 
-
-
 --- inserções transito --- (por enquanto não tem -> fica pra etapa seguinte com a obtenção das geometrias)
-
-
