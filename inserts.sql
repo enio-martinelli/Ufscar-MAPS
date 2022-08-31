@@ -2018,4 +2018,5 @@ INSERT INTO dept_gerencia_lab (lab_id, dept_id) SELECT l.lab_id, d.dept_id
 FROM (SELECT lab_id FROM laboratorio WHERE nome = 'Laboratório de Instrumentação para o Ensino de Química') l,
      (SELECT dept_id FROM departamento WHERE nome = 'Departamento de Química') d
 
+
 --- inserções transito --- (por enquanto não tem -> fica pra etapa seguinte com a obtenção das geometrias)
