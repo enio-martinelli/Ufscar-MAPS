@@ -64,7 +64,7 @@ VALUES
 ('Maíra Aparecida Stefanini', 'stefanin@ufscar.br', 'Doutora'),
 ('Daniela Godoi Jacomassi', 'danielagodoij@ufscar.br', 'Doutora'),
 ('Cleiton Augusto Libardi', 'c.libardi@ufscar.br', 'Doutor'),
-('Ariene Angelini dos Santos Orlandi', 'ariene@ufscar.br' 'Doutora'),
+('Ariene Angelini dos Santos Orlandi', 'ariene@ufscar.br', 'Doutora'),
 ('Jamile Claro de Castro Bussadori', 'jamile@ufscar.br', 'Doutora'),
 ('Anna Carolyna L. Gianlorenço', 'gianlorenco@ufscar.br', 'Doutora'),
 ('Luiz Fernando A. Selistre', 'lfaselistre@ufscar.br', 'Doutor'),
