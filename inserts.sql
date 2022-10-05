@@ -260,7 +260,7 @@ INSERT INTO departamento (dept_sigla, centro_id, nome, localizacao, site, telefo
     --- CCBS ---
     ('DB', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Botânica', NULL, 'www.db.ufscar.br', '(16) 3351 8308', 'db@ufscar.br'),
     ('DCAm', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Ciências Ambientais', NULL, 'www.dcam.ufscar.br', '(16) 3351-9776', 'dcam@ufscar.br'),
-    ('DCF', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Ciências Fisiológicas', NULL, 'www.dcf.ufscar.br/pt-br', '(16) 3351-8327', 'dcf@ufscar.br'),
+    ('DCF', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Ciências Fisiológicas', NULL, 'www.dcf.ufscar.br/pt-br', '(16) 3351-8327', 'dcf@ufscar.br'),
     ('DEBE', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Ecologia e Biologia Evolutiva', NULL, NULL, '(16) 3351-8322', 'secdebe@ufscar.br'),
     ('DEFMH', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Educação Físcia e Motricidade Humana', NULL, 'www.educacaofisica.ufscar.br/', '(16) 3351-8294', 'ccef@ufscar.br'),
     ('DEnf', (SELECT centro_id FROM centro WHERE sigla_centro='CCBS'), 'Departamento de Enfermagem', NULL, 'www.denf.ufscar.br', '(16) 3351-8334', 'denf@ufscar.br'),
@@ -310,7 +310,7 @@ INSERT INTO departamento (dept_sigla, centro_id, nome, localizacao, site, telefo
     ('DME', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Metodologia de Ensino', NULL, 'www.dme.ufscar.br', '(16) 3351-8373', 'dme@ufscar.br'),
     ('DPsi', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Psicologia', NULL, 'www.dpsi.ufscar.br', '(16) 3351-8361', 'dpsic@ufscar.br'),
     ('DS', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Sociologia', NULL, 'www.ds.ufscar.br', '(16)3306-6515', 'ds@ufscar.br'),
-    ('DTPP', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Teorias Práticas e Pedagógicas', NULL, 'www.dtpp.ufscar.br', '(16) 3543-2582', 'dtpp@ufscar.br');
+    ('DTPP', (SELECT centro_id FROM centro WHERE sigla_centro='CECH'), 'Departamento de Teorias e Práticas Pedagógicas', NULL, 'www.dtpp.ufscar.br', '(16) 3543-2582', 'dtpp@ufscar.br');
    
 --- inserções departamento_professor ---
 INSERT INTO departamento_professor (prof_id, dept_id, ano_inicio, ano_termino, cargo)
