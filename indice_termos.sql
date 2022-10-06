@@ -24,7 +24,6 @@ INSERT into indice_termos(SELECT 'sigla_preitoria', 'pro_reitoria', 'ProACE');
 INSERT into indice_termos(SELECT 'sigla_preitoria', 'pro_reitoria', 'ProAd');
 
 ---inserção área---
-
 INSERT into indice_termos(SELECT 'nome', 'area', 'Ginásio de Esportes');
 INSERT into indice_termos(SELECT 'nome', 'area', 'Campo de Futebol');
 INSERT into indice_termos(SELECT 'nome', 'area', 'Campo de Futebol 01');
