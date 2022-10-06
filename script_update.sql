@@ -112,4 +112,4 @@ UPDATE departamento SET localizacao = (SELECT way FROM ufscar_sorocaba_polygon W
 UPDATE departamento SET localizacao = (SELECT way FROM ufscar_sorocaba_polygon WHERE name = 'Departamento de Ciências Ambientais')
 		WHERE dept_id = 37;
 UPDATE departamento SET localizacao = (SELECT way FROM ufscar_sorocaba_polygon WHERE name = 'Departamento de Física, Química e Matemática')
-		WHERE dept_id = 38;
+		WHERE dept_id = 38; 
