@@ -1,14 +1,10 @@
-/*DROP TABLE indice_termos*/
-
 CREATE TABLE IF NOT EXISTS indice_termos(
     coluna VARCHAR NOT NULL,
     tabela VARCHAR NOT NULL,
 	termo VARCHAR NOT NULL
-
 );
 
 ---inserção reitoria---
-
 
 ---inserção pro_reitoria---
 INSERT into indice_termos(SELECT 'nome', 'pro_reitoria', 'Pró-Reitoria de Graduação');
