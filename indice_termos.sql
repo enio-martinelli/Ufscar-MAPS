@@ -144,8 +144,30 @@ INSERT into indice_termos(SELECT 'dept_sigla', 'departamento', 'DPsi');
 INSERT into indice_termos(SELECT 'dept_sigla', 'departamento', 'DS');
 INSERT into indice_termos(SELECT 'dept_sigla', 'departamento', 'DTPP');
 
+--- insert centro---
+INSERT into indice_termos(SELECT 'nome', 'centro', 'Centro de Ciências Biológicas e de Saúde');
+INSERT into indice_termos(SELECT 'nome', 'centro', 'Centro de Ciências Exatas e Tecnologia');
+INSERT into indice_termos(SELECT 'nome', 'centro', 'Centro de Educação e Ciências Humanas');
+INSERT into indice_termos(SELECT 'nome', 'centro', 'Centro de Ciências Agrárias');
+INSERT into indice_termos(SELECT 'nome', 'centro', 'Centro de Ciências Humanas e Biológicas');
+INSERT into indice_termos(SELECT 'nome', 'centro', 'Centro de Ciências em Gestão e Tecnologia');
+INSERT into indice_termos(SELECT 'nome', 'centro', 'Centro de Ciências e Tecnologia para a Sustentabilidade');
+INSERT into indice_termos(SELECT 'nome', 'centro', 'Centro de Ciências da Natureza');
 
+INSERT into indice_termos(SELECT 'sigla_centro', 'centro', 'CCBS');
+INSERT into indice_termos(SELECT 'sigla_centro', 'centro', 'CCET');
+INSERT into indice_termos(SELECT 'sigla_centro', 'centro', 'CECH');
+INSERT into indice_termos(SELECT 'sigla_centro', 'centro', 'CCA');
+INSERT into indice_termos(SELECT 'sigla_centro', 'centro', 'CCHB');
+INSERT into indice_termos(SELECT 'sigla_centro', 'centro', 'CCGT');
+INSERT into indice_termos(SELECT 'sigla_centro', 'centro', 'CCTS');
+INSERT into indice_termos(SELECT 'sigla_centro', 'centro', 'CCN');
 
+---insert campus---
+INSERT into indice_termos(SELECT 'nome', 'campus', 'São Carlos');
+INSERT into indice_termos(SELECT 'nome', 'campus', 'Araras');
+INSERT into indice_termos(SELECT 'nome', 'campus', 'Sorocaba');
+INSERT into indice_termos(SELECT 'nome', 'campus', 'Lagoa do Sino');
 
 
 
