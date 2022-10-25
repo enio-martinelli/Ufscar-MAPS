@@ -113,3 +113,14 @@ UPDATE departamento SET localizacao = (SELECT way FROM ufscar_sorocaba_polygon W
 		WHERE dept_id = 37;
 UPDATE departamento SET localizacao = (SELECT way FROM ufscar_sorocaba_polygon WHERE name = 'Departamento de Física, Química e Matemática')
 		WHERE dept_id = 38; 
+
+--- update campi ---
+UPDATE campus SET localizacao = (SELECT way FROM ufscar_campi WHERE name = 'Universidade Federal de São Carlos - Campus Sorocaba') WHERE campus_id = 4;
+UPDATE campus SET localizacao = (SELECT way FROM ufscar_campi WHERE name = 'Universidade Federal de São Carlos - Campus Araras') WHERE campus_id = 3;
+UPDATE campus SET localizacao = (SELECT way FROM ufscar_campi WHERE name = 'Universidade Federal de São Carlos') WHERE campus_id = 2;
+UPDATE campus SET localizacao = (SELECT way FROM ufscar_campi WHERE name = 'Universidade Federal de São Carlos - Campus Lagoa do Sino') WHERE campus_id = 5;
+
+---update centro---
+---só achei 2---
+UPDATE centro SET localizacao = (SELECT way FROM ufscar_saocarlos_polygon WHERE name = 'Centro de Ciências Biológicas e da Saúde') WHERE centro_id = 2;
+UPDATE centro SET localizacao = (SELECT way FROM ufscar_saocarlos_polygon WHERE name = 'Centro de Educação e Ciências Humanas') WHERE centro_id = 3;
