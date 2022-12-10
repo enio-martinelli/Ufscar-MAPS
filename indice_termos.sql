@@ -1,11 +1,13 @@
 CREATE TABLE IF NOT EXISTS indice_termos(
-    coluna VARCHAR NOT NULL,
-    tabela VARCHAR NOT NULL,
-	termo VARCHAR NOT NULL
+    coluna VARCHAR,
+    tabela VARCHAR,
+    termo VARCHAR NOT NULL
+
 );
 
 ---inserção reitoria---
-
+INSERT INTO indice_termos (SELECT 'NULL', 'NULL', 'Reitoria');
+						 
 ---inserção pro_reitoria---
 INSERT into indice_termos(SELECT 'nome', 'pro_reitoria', 'Pró-Reitoria de Graduação');
 INSERT into indice_termos(SELECT 'nome', 'pro_reitoria', 'Pró-Reitoria de Pós-Graduação');
